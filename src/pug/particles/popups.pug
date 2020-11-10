@@ -1,0 +1,38 @@
+.popup.js-popup(data-block="feedback")
+	.popup__wrapper
+		.popup__content
+			.popup__close.js-popup-close
+				+svg('close')
+			.popup-block
+				include form-example
+					
+		.popup__layout.js-popup-close
+
+
+			
+.popup.js-popup(data-block="ajax-content")
+	.popup__wrapper
+		.popup__content
+			.popup__close.js-popup-close
+				+svg('close')
+			.js-ajax-wrapper
+					
+		.popup__layout.js-popup-close
+
+
+.popup.js-popup(data-block="video")
+	.popup__wrapper
+		.popup__content
+			.popup__close.js-popup-close
+				+svg('close')
+			iframe.js-iframe(src="" allow='autoplay' frameborder="0" allowfullscreen)
+					
+		.popup__layout.js-popup-close
+
+
+.popup-thank#popup-thank
+	.popup__wrapper
+		.popup-thank__content
+			.popup__close
+				+svg('close')
+			h4 Спасибо за заявку. Наши менеджеры свяжутся с вами в ближайшее время.

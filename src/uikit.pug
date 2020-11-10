@@ -1,0 +1,251 @@
+extends pug/base
+
+append vars
+	- title = 'UiKit'
+
+block content
+	style.
+		.elem {
+			margin-bottom: 80px;
+		}
+
+		.elem .row {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.button .row {
+			max-width: 588px;
+			margin: 0 0 16px;
+		}
+
+		.button .row .col {
+			max-width: 160px;
+			width: 100%;
+			margin: 0 10px;
+		}
+
+		.input .row {
+			max-width: 730px;
+			margin: 0 0 37px;
+		}
+
+		.input .row .col,.select .row .col {
+			max-width: 350px;
+			width: 100%;
+			margin: 5px;
+		}
+
+		.checkbox .row {
+			max-width: 350px;
+		}
+
+		.select .row {
+			max-width: 730px;
+		}
+
+		.tooltip .icon {
+			color: #212429;
+			fill: transparent;
+			width: 24px;
+			height: 24px;
+		}
+
+		.tooltip .icon svg {
+			width: 100%;
+			height: 100%;
+		}
+
+		.links .row {
+			max-width: 500px;
+			margin-bottom: 20px;
+		}
+
+		.links .row .col{
+			margin-right: 78px;
+		}
+
+		.nav .row {
+			max-width: 250px;
+			align-items: center;
+		}
+		.block-popup .row {
+			justify-content: flex-start;
+		}
+		.block-popup .row .col{
+			width: auto;
+			max-width: none;
+			margin-left: 0;
+			margin-right: 30px;
+		}
+	.wrapper
+		h1 Live chat support: a complete guide to live chat implementation and best practices
+		.button.elem
+			.row
+				.col
+					a.btn.btn--blue(href='#') Primary
+				.col
+					a.btn.btn--red(href='#') Secondary
+				.col
+					a.btn.btn--flat(href='#') Alternate
+
+			.row(style='display: flex;')
+				.col
+					a.btn.btn--blue.disabled(href='#') Primary
+				.col
+					a.btn.btn--red.disabled(href='#') Secondary
+				.col
+					a.btn.btn--flat.disabled(href='#') Alternate
+
+		.input.elem
+			.row
+				.col
+					label.form-field
+						input.js-input.js-input-mask.form-field__input(type='text', data-mask='999 999 999')
+						span.form-field__label Placeholder
+						span.form-field__icon
+							+svg('alert')
+				.col
+					label.form-field.form-field--error
+						input.js-input.form-field__input(type='text', value='Error')
+						span.form-field__label Error
+						span.form-field__icon
+							+svg('alert')
+			.row
+				.col
+					label.form-field.disabled
+						input.js-input.form-field__input(type='text')
+						span.form-field__label Disabled
+						span.form-field__icon
+							+svg('alert')
+
+		.select.elem
+			.row
+				.col
+					.form-select
+						span.form-select__label Select
+						select.js-select(name='state')
+							option(value='MA') Magnetic
+							option(value='GY') Gravity
+							option(value='ME') Mechanical Mechanical
+							option(value='EL') Electronic
+							option(value='EL') Electronic
+				.col
+					.form-select
+						span.form-select__label Select Input
+						select.js-select-input(name='state')
+							option(value='MA') Magnetic
+							option(value='GY') Gravity
+							option(value='ME') Mechanical
+							option(value='EL') Electronic
+							option(value='EL') Electronic
+			.row
+				.col
+					.form-select.disabled
+						span.form-select__label Select
+						select.js-select(name='state')
+							option(value='MA') Disabled
+
+		.checkbox.elem
+			.row
+				.col
+					label.form-checkbox
+						input.form-checkbox__input(type='checkbox')
+						span.form-checkbox__checkmark
+						span.form-checkbox__text Default
+				.col
+					label.form-radio
+						input.form-radio__input(type='radio' name='account')
+						span.form-radio__checkmark
+						span.form-radio__text Default
+			.row
+				.col
+					label.form-checkbox.disabled
+						input.form-checkbox__input(type='checkbox')
+						span.form-checkbox__checkmark
+						span.form-checkbox__text Default
+				.col
+					label.form-radio.disabled
+						input.form-radio__input(type='radio' name='account')
+						span.form-radio__checkmark
+						span.form-radio__text Default
+
+		.tooltip.elem
+			.row
+				.col
+					.js-tooltip(title='Helper Text Helper Text Helper Text Text Text')
+						.icon
+							+svg('question')
+
+		.tag.elem
+			.row
+				.col
+					.tag
+						a.tag__item(href='#!'): span 1 of 12
+						a.tag__item(href='#!'): span Favorite
+						a.tag__item(href='#!'): span Category
+						a.tag__item.tag__item--icon(href='#!')
+							+svg('share')
+							span SHared
+
+		.links.elem
+			.row
+				.col
+					a.link.link--arrow.link--blue(href='#!')
+						span Смотреть все
+						+svg('arrow')
+
+		.filters.elem
+			.row
+				.col
+					.form-filter
+						.form-filter__label Сортировать
+						select.js-select-filter(name='sort')
+							option(value='fav') Популярные
+							option(value='price') По стоимости
+							option(value='low_price') Цена убывает
+							option(value='high_price') Цена возрастает
+
+		.element.elem
+			.row
+				.col
+					.counter
+						span.counter__item.js-sub
+						span.counter__item
+							span.js-counter-text 0
+							input.js-counter-input(title='number', hidden, value='0')
+						span.counter__item.js-add
+
+		.nav.elem
+			.row
+				.col
+					.close-icon
+						+svg('close')
+				.col
+					.navigation-arrows
+						.navigation-arrows__item
+							+svg('arrow')
+						.navigation-arrows__item
+							+svg('arrow')
+
+		.buttons.elem
+			.row
+				.col
+					.btn-group
+						a.btn-group__item.btn-group__item--active(href='#!') Мероприятия 21
+						a.btn-group__item(href='#!') Мероприятия 22
+						a.btn-group__item(href='#!') Мероприятия 23
+
+		include pug/particles/form-example
+
+		.button.elem.block-popup
+			h2 Пример открытия попапов
+			.row
+				.col
+					a.btn.btn--blue.js-popup-link(data-link="feedback") Попап с формой
+				.col
+					a.btn.btn--blue.js-popup-link(data-link="ajax-content" href="ajax-content-example.html" data-href="ajax-content-example.html") Ajax-попап
+				.col
+					a.btn.btn--blue.js-popup-link(data-link="video" data-src="https://www.youtube.com/embed/Euv2ramIrv4?autoplay=1") Попапа с видео
+
+

@@ -1,0 +1,31 @@
+.form
+	&-block
+		h2 
+			margin-top: 0
+	&-row
+		width: 100% 
+		display: flex 
+		flex-wrap: wrap 
+		justify-content: space-between
+	&-col 
+		width: 32%
+
+		+bp(+600px)
+			width: 100%
+
+	&-line
+		width: 100%
+
+	&-bottom 
+		display: flex 
+		align-items: center 
+		justify-content: space-between
+
+		+bp(600px)
+			flex-direction: column
+
+			.btn 
+				width: 100% 
+
+			.form-checkbox
+				margin-bottom: 20px

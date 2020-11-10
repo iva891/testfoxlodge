@@ -1,0 +1,52 @@
+.form-radio
+	position: relative
+	padding: 0 0 0 40px
+	user-select: none
+	display: block
+	cursor: pointer
+	font-size: 14px
+	line-height: 260%
+	
+	&[disabled]
+		opacity: .5
+		pointer-events: none
+	
+	&__input
+		position: absolute
+		cursor: pointer
+		opacity: 0
+		width: 0
+		height: 0
+		
+		&:checked ~ .form-radio__checkmark:after
+			opacity: 1
+	
+	&__text
+		font-size: $checkbox-fs
+		color: $checkbox-color
+		line-height: 1
+	
+	&__checkmark
+		position: absolute
+		top: 8px
+		left: 0
+		border: $checkbox-bor-width solid $checkbox-bor-color
+		border-radius: 50%
+		background-color: $white
+		width: 20px
+		height: 20px
+		
+		&:after
+			background: $radio-check-color
+			border-radius: 50%
+			width: 6px
+			height: 6px
+			content: ''
+			opacity: 0
+			transition: opacity 150ms ease-in-out
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			margin: auto

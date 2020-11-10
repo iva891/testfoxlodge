@@ -1,0 +1,73 @@
+*
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+	-moz-tap-highlight-color: rgba(0, 0, 0, 0)
+	box-sizing: border-box
+
+*::before,
+*::after
+	box-sizing: inherit
+
+html, :root
+	font-size: $baseRem
+	overflow-x: hidden
+
+body
+	font-family: $baseFont
+	font-size: $baseRem
+	color: $baseTxt
+	min-width: 320px
+	padding: 0
+	margin: 0
+	overflow-x: hidden
+	height: 100%
+	@include bp(1024px)
+		-webkit-text-size-adjust: 100%
+		
+	::-moz-selection
+		background: #f4f2f0
+	::selection
+		background: #f4f2f0
+
+.page
+	display: flex
+	flex-direction: column
+	min-height: 100vh
+	width: 100%
+	overflow: hidden
+
+.main
+	flex-grow: 1
+
+img
+	max-width: 100%
+
+a
+	text-decoration: none
+	outline: none
+	color: inherit
+
+input,
+button,
+select,
+textarea
+	border: none
+	background-color: transparent
+	outline: none
+	cursor: pointer
+
+ul, ol, li, h1, h2, h3, h4, h5, h6, p
+	margin: 0
+	padding: 0
+
+ul, li
+	list-style: none
+
+a:active, a:visited, a:focus
+	outline: none
+
+.wrapper
+	width: 100%
+	min-width: 320px
+	max-width: 1395px
+	padding: 0 20px
+	margin: 0 auto

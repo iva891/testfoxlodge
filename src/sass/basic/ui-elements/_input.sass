@@ -1,0 +1,123 @@
+.form-field
+	position: relative
+	display: block
+	width: 100%
+	margin-bottom: 30px
+	
+	&[disabled],
+	&.disabled
+		opacity: .5
+		pointer-events: none
+
+	+bp(600px)
+		margin-bottom: 15px
+
+	&__input
+		font-family: $baseFont
+		display: block
+		width: 100%
+		padding: 0px 20px 0px
+		height: $input-h-large
+		line-height: $input-h-large
+		border-radius: $input-border-radius
+		border: 1px solid $input-bor-color
+		color: $input-color
+		font-size: $input-fs
+		transition: .3s linear
+		
+		&:focus
+			border-color: $input-bor-color-focus
+			box-shadow: 0 1px 1px rgba(51, 154, 240, 0.1)
+
+		+bp($point-2)
+			height: $input-h 
+			line-height: $input-h
+			font-size: $input-fs-xs
+			border-radius: $input-border-radius-xs
+
+	&__textarea 
+		height: 120px 
+		line-height: 1.5	
+		padding-top: 25px 
+		padding-bottom: 25px
+
+		+bp($point-2)
+			height: 90px	
+	&__label
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		padding: 0 20px
+		display: flex
+		align-items: center
+		width: 100%
+		height: 100%
+		font-size: $input-fs
+		will-change: transform
+		transform-origin: 20px 0
+		transition: .3s linear
+		&--top 
+			align-items: flex-start 
+			padding-top: 24px
+
+		+bp($point-2)
+			font-size: $input-fs-xs
+		
+	&__icon
+		position: absolute
+		top: 0
+		bottom: 0
+		right: 16px
+		margin: auto 0
+		width: 24px
+		height: 24px
+		opacity: 0
+		transition: opacity .3s linear
+		+foil 
+		background-image: url('../images/alert.svg')
+		
+		svg
+			width: 100%
+			height: 100%
+			fill: transparent
+
+	.select2-container
+		width: 100% !important
+		
+	&--focused
+		.form-field__label,
+		.select2-selection__placeholder
+			transform: translate(0,-8px) scale(0.7)
+		
+	&--error
+		.form-field__label,
+		.select2-selection__placeholder
+			color: $input-color-error !important
+			transform: translate(0,-8px) scale(0.7)
+	
+		.form-field__input
+			border-color: $input-color-error
+			box-shadow: 0 1px 1px rgba(240, 61, 62, 0.1)
+			
+		.form-field__icon
+			opacity: 1
+			color: $input-color-error
+
+		.select2-container .select.select2-selection--single
+			border-color: $input-color-error
+			box-shadow: 0 1px 1px rgba(240, 61, 62, 0.1)
+
+		.select2-selection__arrow
+			display: none
+
+	&-textarea
+		.form-field__icon
+			bottom: auto 
+			top: 16px
+
+
+label.error
+	display: none
+			
