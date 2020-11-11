@@ -5,51 +5,55 @@
 	font-family: $baseFont
 	color: $white
 	font-size: $btn-fs
-	font-weight: 500
+	font-weight: 600
 	text-align: center
 	white-space: nowrap
 	transition: 0.5s ease
 	cursor: pointer
 	padding: 0 30px
-	border-bottom: none
-	border-radius: $btn-border-radius
+	border: 1px solid $orange
 	height: $btn-h
+	background-color: $btn-orange
+	min-width: 190px
+
+	&:hover
+		background-color: $btn-orange-hover
+		color: $white
 	
 	&[disabled],
 	&.disabled
 		opacity: .5
 		pointer-events: none
 
+
+	&--gray 
+		border-color: $btn-gray-color
+		background-color: $btn-gray-color
+		color: $baseTxt
+		border-width: 3px
+
+		&:hover
+			background-color: $white 
+			color: $baseTxt
+
+	&--bor 
+		background-color: $white 
+		border-color: $btn-flat-bor
+		color: $baseTxt
+		min-width: 0
+
+		&:hover 
+			border-color: $btn-flat-bor-hover
+			color: $baseTxt
+			background-color: $white
+
 	+bp($point-2)
-		border-radius: $btn-group-bor-radius-xs
+		height: $btn-h-480
+		width: 100%
+
+
+
+
+
 	
-	&--blue
-		background-color: $btn-blue
-		
-		&:hover
-			color: $white
-			background-color: $btn-blue-hover
-			
-	&--red
-		background-color: $btn-red
-		
-		&:hover
-			color: $white
-			background-color: $btn-red-hover
-			
-	&--flat
-		color: $btn-flat-color
-		border: 1px solid $btn-flat-bor
-		
-		&:hover
-			color: $btn-flat-color
-			border: 1px solid $btn-flat-bor-hover
-
-	&--large 
-		height: $btn-h-large
-		padding: 0 40px
-
-		+bp($point-2)
-			height: $btn-h
-			padding: 0 30px
-		
+	

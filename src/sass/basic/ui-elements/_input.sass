@@ -17,23 +17,24 @@
 		display: block
 		width: 100%
 		padding: 0px 20px 0px
-		height: $input-h-large
-		line-height: $input-h-large
-		border-radius: $input-border-radius
+		height: $input-h
+		line-height: $input-h
 		border: 1px solid $input-bor-color
 		color: $input-color
 		font-size: $input-fs
 		transition: .3s linear
+		font-weight: 600
 		
 		&:focus
 			border-color: $input-bor-color-focus
-			box-shadow: 0 1px 1px rgba(51, 154, 240, 0.1)
+			
 
 		+bp($point-2)
 			height: $input-h 
 			line-height: $input-h
 			font-size: $input-fs-xs
-			border-radius: $input-border-radius-xs
+
+
 
 	&__textarea 
 		height: 120px 
@@ -44,20 +45,20 @@
 		+bp($point-2)
 			height: 90px	
 	&__label
+		display: inline-block
 		position: absolute
-		top: 0
-		right: 0
-		bottom: 0
-		left: 0
-		padding: 0 20px
+		top: -8px
+		left: 12px
+		padding: 0 5px
+		background-color: $white 
+		z-index: 2
 		display: flex
 		align-items: center
-		width: 100%
-		height: 100%
-		font-size: $input-fs
-		will-change: transform
-		transform-origin: 20px 0
-		transition: .3s linear
+		font-size: $input-pl
+		font-weight: 600
+		// will-change: transform
+		// transform-origin: 20px 0
+		// transition: .3s linear
 		&--top 
 			align-items: flex-start 
 			padding-top: 24px
@@ -77,29 +78,47 @@
 		transition: opacity .3s linear
 		+foil 
 		background-image: url('../images/alert.svg')
+		z-index: 3
 		
 		svg
 			width: 100%
 			height: 100%
 			fill: transparent
 
+	label.error
+		width: calc(100% - 2px)
+		padding: 0 20px
+		font-weight: 600
+		color: $input-color-error
+		font-size: $input-fs
+		position: absolute 
+		top: 50% 
+		transform: translateY(-50%)
+		left: 1px
+		z-index: 2
+		background-color: $white
+
+		+bp($point-2)
+			font-size: $input-fs-xs
+
 	.select2-container
 		width: 100% !important
 		
 	&--focused
-		.form-field__label,
-		.select2-selection__placeholder
-			transform: translate(0,-8px) scale(0.7)
+		// .form-field__label,
+		// .select2-selection__placeholder
+		// 	transform: translate(0,-8px) scale(0.7)
 		
 	&--error
-		.form-field__label,
-		.select2-selection__placeholder
-			color: $input-color-error !important
-			transform: translate(0,-8px) scale(0.7)
+		// .form-field__label,
+		// .select2-selection__placeholder
+		// 	color: $input-color-error !important
+		// 	transform: translate(0,-8px) scale(0.7)
+
 	
 		.form-field__input
-			border-color: $input-color-error
-			box-shadow: 0 1px 1px rgba(240, 61, 62, 0.1)
+			border-color: $input-bor-color
+			color: $input-color-error
 			
 		.form-field__icon
 			opacity: 1

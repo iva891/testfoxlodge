@@ -4,18 +4,18 @@
 		.form-row
 			.form-col
 				label.form-field
-					input.js-input.form-field__input(type='text', name="name", data-msg="" required)
+					input.js-input.form-field__input(type='text', name="name", data-msg="Заполните форму" required)
 					span.form-field__label Ваше имя
 					span.form-field__icon
 
 			.form-col
 				label.form-field
-					input.js-input.js-input-mask.form-field__input(type='tel', name="tel", data-mask="+7(999)999-99-99" data-msg="" required)
+					input.js-input.js-input-mask.form-field__input(type='tel', name="tel", data-mask="+7(999)999-99-99" data-msg="Заполните форму" required)
 					span.form-field__label Ваш телефон
 					span.form-field__icon
 			.form-col
 				.form-field.form-select
-					select.js-select(name='example' data-placeholder="Выбор значения" data-msg="" required)
+					select.js-select(name='example' data-placeholder="Выбор значения" data-msg="Заполните форму" required)
 						option(value='') 
 						option(value='GY') Gravity
 						option(value='ME') Mechanical
@@ -24,7 +24,7 @@
 					.form-field__icon
 			.form-line
 				label.form-field.form-field-textarea
-					textarea.js-input.form-field__input.form-field__textarea(name="message" data-msg="")
+					textarea.js-input.form-field__input.form-field__textarea(name="message" data-msg="Заполните форму" required)
 					span.form-field__label.form-field__label--top Ваше сообщение
 					span.form-field__icon
 

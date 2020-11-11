@@ -1,6 +1,7 @@
 h1
 	font-size: $h1-fs
 	line-height: $h1-lh
+	letter-spacing: 0.01em 
 	margin: round($baseGutter*3) 0 round($baseGutter*1.1)
 	
 	@include bp($point-3)
@@ -10,6 +11,8 @@ h1
 h2
 	font-size: $h2-fs
 	line-height: $h2-lh
+	letter-spacing: 0.01em 
+	font-feature-settings: 'kern' off, 'liga' off
 	margin: round($baseGutter*1.2) 0 round($baseGutter*1.2)
 	
 h3
@@ -20,6 +23,7 @@ h3
 h4
 	font-size: $h4-fs
 	line-height: $h4-lh
+	letter-spacing: -0.01em
 	margin: round($baseGutter*1.5) 0 round($baseGutter*0.6)
 	
 h5
@@ -30,6 +34,7 @@ h5
 h6
 	font-size: $h6-fs
 	line-height: $h6-lh
+	font-weight: 500
 	margin: round($baseGutter*1.2) 0 round($baseGutter*0.6)
 	
 p
@@ -66,7 +71,7 @@ img
 small
 	font-size: $small-fs
 	line-height: $small-lh
-	font-style: italic
+	font-weight: 600
 	
 blockquote
 	font-size: $blockquote-fs

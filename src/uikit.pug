@@ -30,6 +30,10 @@ block content
 			margin: 0 0 37px;
 		}
 
+		.elem {
+			width: 100%;
+		}
+
 		.input .row .col,.select .row .col {
 			max-width: 350px;
 			width: 100%;
@@ -78,46 +82,166 @@ block content
 			margin-left: 0;
 			margin-right: 30px;
 		}
+		.fb-wrap {
+			display: flex;
+		}
+		.fx-item {
+			width: calc(100% - 300px)
+		}
+		.w15 {
+			width: 300px;
+		}
+		.fx-item:first-child h3 {
+			margin-top: 0;
+		}
+		.fx-item h1:first-child {
+			margin-top: 0;
+		}
+		.color {
+			display: flex;
+		}
+		.color-box {
+			width: 120px;
+			height: 120px;
+			border-radius: 8px;
+			margin-right: 22px;
+		}
+		.color-line {
+			width: 120px;
+			height: 54px;
+		}
+		.typography__line {
+			position: relative;
+			padding-left: 100px
+		}
+		.typography__name {
+			width: 100px;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 0;
+			color: #CACACA;
+			font-size: 12px;
+		}
+		.typography__flex {
+			display: flex;
+			margin-bottom: 20px;
+		}
+		.typography__unit {
+			margin-right: 50px;
+		}
+		.typography__unit:last-child {
+			margin-right: 0;
+		}
 	.wrapper
-		h1 Live chat support: a complete guide to live chat implementation and best practices
-		.button.elem
-			.row
-				.col
-					a.btn.btn--blue(href='#') Primary
-				.col
-					a.btn.btn--red(href='#') Secondary
-				.col
-					a.btn.btn--flat(href='#') Alternate
+		.fb-wrap
+			.fx-item.w15
+				h3 Цвета
+			.fx-item
+				.color.elem
+					.color-box.orange
+					.color-box.light-orange-gradient
+					.color-box.yellow
+					.color-box.beige
+					.color-box.green
+				.color.elem
+					.color-line.black
+					.color-line.gray4
+					.color-line.gray3
+					.color-line.gray2
+					.color-line.gray1
+		.fb-wrap
+			.fx-item.w15
+				h3 Типографика
+			.fx-item
+				.typography.elem
+					.typography__line
+						.typography__name h1
+						.typography__value
+							h1 Hayes Valley Studio
+					.typography__line
+						.typography__name h2
+						.typography__value
+							h2 Hayes Valley Studio
+					.typography__line
+						.typography__name h3
+						.typography__value
+							h3 Hayes Valley Studio
+					.typography__line
+						.typography__name h4
+						.typography__value
+							h4 Hayes Valley Studio
+					.typography__line
+						.typography__name h5
+						.typography__value
+							h5 Hayes Valley Studio
+					.typography__line
+						.typography__name h6 
+						.typography__value
+							h6 Hayes Valley Studio
+					.typography__line
+						.typography__name p b
+						.typography__value
+							p
+								b Hayes Valley Studio
+					.typography__line
+						.typography__name p
+						.typography__value
+							p Hayes Valley Studio
+					.typography__line
+						.typography__name small
+						.typography__value
+							small Hayes Valley Studio
 
-			.row(style='display: flex;')
-				.col
-					a.btn.btn--blue.disabled(href='#') Primary
-				.col
-					a.btn.btn--red.disabled(href='#') Secondary
-				.col
-					a.btn.btn--flat.disabled(href='#') Alternate
+		.fb-wrap
+			.fx-item.w15
+				h3 Кнопки
+			.fx-item
+				.button.elem
+					.typography__line
+						.typography__name DEFAULT
+						.typography__flex
+							.typography__unit
+								a.btn(href="#") Найти
+							.typography__unit
+								a.btn.btn--gray(href="#") 5 гостей
+							.typography__unit
+								a.btn.btn--bor(href="#") Забронировать
+					.typography__line
+						.typography__name DISABLED
+						.typography__flex
+							.typography__unit
+								a.btn.disabled(href="#") Найти
+							.typography__unit
+								a.btn.btn--gray.disabled(href="#") 5 гостей
+							.typography__unit
+								a.btn.btn--bor.disabled(href="#") Забронировать
 
-		.input.elem
-			.row
-				.col
-					label.form-field
-						input.js-input.js-input-mask.form-field__input(type='text', data-mask='999 999 999')
-						span.form-field__label Placeholder
-						span.form-field__icon
-							+svg('alert')
-				.col
-					label.form-field.form-field--error
-						input.js-input.form-field__input(type='text', value='Error')
-						span.form-field__label Error
-						span.form-field__icon
-							+svg('alert')
-			.row
-				.col
-					label.form-field.disabled
-						input.js-input.form-field__input(type='text')
-						span.form-field__label Disabled
-						span.form-field__icon
-							+svg('alert')
+		.fb-wrap
+			.fx-item.w15
+				h3 Формы
+			.fx-item
+				.input.elem
+					.row
+						.col
+							label.form-field
+								input.js-input.js-input-mask.form-field__input(type='text' data-msg="")
+								span.form-field__label Фамилия *
+								span.form-field__icon
+									+svg('alert')
+						.col
+							label.form-field.form-field--error
+								input.js-input.form-field__input(type='text', value='Заполните форму')
+								span.form-field__label Error
+								span.form-field__icon
+									+svg('alert')
+					.row
+						.col
+							label.form-field.disabled
+								input.js-input.form-field__input(type='text')
+								span.form-field__label Disabled
+								span.form-field__icon
+									+svg('alert')
 
 		.select.elem
 			.row
