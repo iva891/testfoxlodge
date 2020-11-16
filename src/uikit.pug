@@ -37,7 +37,11 @@ block content
 		.input .row .col,.select .row .col {
 			max-width: 350px;
 			width: 100%;
-			margin: 5px;
+			margin: 10px;
+		}
+
+		.input {
+			margin: 0 -10px;
 		}
 
 		.checkbox .row {
@@ -85,6 +89,7 @@ block content
 		.fb-wrap {
 			display: flex;
 		}
+		.f
 		.fx-item {
 			width: calc(100% - 300px)
 		}
@@ -133,18 +138,56 @@ block content
 		.typography__unit:last-child {
 			margin-right: 0;
 		}
+		.typography h1,
+		.typography h2,
+		.typography h3,
+		.typography h4,
+		.typography h5,
+		.typography h6,
+		.typography p,
+		.typography small {
+			margin-top: 0;
+			margin-bottom: 30px;
+		}
+		.icons  {
+			justify-content: flex-start !important;
+		}
+		.icon-wrap .col-icon {
+			width: 24px;
+			height: 24px;
+			margin: 0 10px;
+		}
+		.icon-wrap .fx-item {
+			margin-right: 70px;
+		}
+		.icon-wrap {
+			align-items: center;
+		}
+		.col-soc {
+			margin: 10px;
+		}
+		.link-wrap .col {
+			margin-right: 50px;
+			margin-bottom: 50px;
+		}
+
 	.wrapper
-		.fb-wrap
+		.fb-wrap.elem(style="padding-top: 130px;")
+			.fx-item.w15
+				h1 Ui Kit
+			.fx-item
+				img(src="images/logo.svg" alt="logo")
+		.fb-wrap.elem
 			.fx-item.w15
 				h3 Цвета
 			.fx-item
-				.color.elem
+				.color
 					.color-box.orange
 					.color-box.light-orange-gradient
 					.color-box.yellow
 					.color-box.beige
 					.color-box.green
-				.color.elem
+				.color(style="margin-top: 50px;")
 					.color-line.black
 					.color-line.gray4
 					.color-line.gray3
@@ -197,7 +240,7 @@ block content
 			.fx-item.w15
 				h3 Кнопки
 			.fx-item
-				.button.elem
+				.button.elem(style="margin-bottom: 30px;")
 					.typography__line
 						.typography__name DEFAULT
 						.typography__flex
@@ -216,6 +259,25 @@ block content
 								a.btn.btn--gray.disabled(href="#") 5 гостей
 							.typography__unit
 								a.btn.btn--bor.disabled(href="#") Забронировать
+				.button.elem
+					.typography__line
+						.typography__name 
+						.typography__flex
+							.typography__unit
+								a.btn.btn--small(href="#") Найти
+							.typography__unit
+								a.btn.btn--gray.btn--small(href="#") 5 гостей
+							.typography__unit
+								a.btn.btn--bor.btn--small(href="#") Забронировать
+					.typography__line
+						.typography__name 
+						.typography__flex
+							.typography__unit
+								a.btn.btn--small.disabled(href="#") Найти
+							.typography__unit
+								a.btn.btn--small.btn--gray.disabled(href="#") 5 гостей
+							.typography__unit
+								a.btn.btn--small.btn--bor.disabled(href="#") Забронировать
 
 		.fb-wrap
 			.fx-item.w15
@@ -229,13 +291,12 @@ block content
 								span.form-field__label Фамилия *
 								span.form-field__icon
 									+svg('alert')
-						.col
-							label.form-field.form-field--error
-								input.js-input.form-field__input(type='text', value='Заполните форму')
-								span.form-field__label Error
-								span.form-field__icon
-									+svg('alert')
-					.row
+						//- .col
+						//- 	label.form-field.form-field--error
+						//- 		input.js-input.form-field__input(type='text', value='')
+						//- 		span.form-field__label Error
+						//- 		span.form-field__icon
+						//- 			+svg('alert')
 						.col
 							label.form-field.disabled
 								input.js-input.form-field__input(type='text')
@@ -243,102 +304,178 @@ block content
 								span.form-field__icon
 									+svg('alert')
 
-		.select.elem
-			.row
-				.col
-					.form-select
-						span.form-select__label Select
-						select.js-select(name='state')
-							option(value='MA') Magnetic
-							option(value='GY') Gravity
-							option(value='ME') Mechanical Mechanical
-							option(value='EL') Electronic
-							option(value='EL') Electronic
-				.col
-					.form-select
-						span.form-select__label Select Input
-						select.js-select-input(name='state')
-							option(value='MA') Magnetic
-							option(value='GY') Gravity
-							option(value='ME') Mechanical
-							option(value='EL') Electronic
-							option(value='EL') Electronic
-			.row
-				.col
-					.form-select.disabled
-						span.form-select__label Select
-						select.js-select(name='state')
-							option(value='MA') Disabled
+		.fb-wrap
+			.fx-item.w15
+				h3 Иконки
+			.fx-item
+				.icon-wrap.elem.fb-wrap
+					.fx-item
+						.row.icons
+							.col.col-icon
+								+svg('search', 'icon')
+							.col.col-icon
+								+svg('house', 'icon')
+							.col.col-icon
+								+svg('round', 'icon')
+							.col.col-icon
+								+svg('food', 'icon')
+							.col.col-icon
+								+svg('pyramid', 'icon')
+							.col.col-icon
+								+svg('heart', 'icon')
+							.col.col-icon
+								+svg('person', 'icon')
+					.fx-item
+						.col
+							.icon.icon--login
+								+svg('login')
+					.fx-item
+						.fb-wrap
+							.col.col-soc
+								.icon.icon--soc.icon--instagram
+									+svg('instagram')
+							.col.col-soc
+								.icon.icon--soc.icon--facebbok
+									+svg('facebbok')
+							.col.col-soc
+								.icon.icon--soc.icon--ex
+									+svg('ex')
 
-		.checkbox.elem
-			.row
-				.col
-					label.form-checkbox
-						input.form-checkbox__input(type='checkbox')
-						span.form-checkbox__checkmark
-						span.form-checkbox__text Default
-				.col
-					label.form-radio
-						input.form-radio__input(type='radio' name='account')
-						span.form-radio__checkmark
-						span.form-radio__text Default
-			.row
-				.col
-					label.form-checkbox.disabled
-						input.form-checkbox__input(type='checkbox')
-						span.form-checkbox__checkmark
-						span.form-checkbox__text Default
-				.col
-					label.form-radio.disabled
-						input.form-radio__input(type='radio' name='account')
-						span.form-radio__checkmark
-						span.form-radio__text Default
+		.fb-wrap
+			.fx-item.w15
+				h3 Ссылки
+			.fx-item.link-wrap
+				.fb-wrap
+					.col
+						a.link.link--icon(href="#")
+							+svg('add') 
+							span Добавить гостя
+					.col
+						a.link.link--icon.disabled(href="#") 
+							+svg('add')
+							span Добавить гостя
+				.fb-wrap
+					.col
+						a.link.link--icon(href="#")
+							+svg('rules') 
+							span Правила безопасности
+					.col
+						a.link.link--icon.disabled(href="#") 
+							+svg('rules')
+							span Правила безопасности
 
-		.tooltip.elem
-			.row
-				.col
-					.js-tooltip(title='Helper Text Helper Text Helper Text Text Text')
-						.icon
-							+svg('question')
+				.fb-wrap.col
+					.rules
+						small Ознакомлен с политикой и выражаю согласие на <a href="#" target="_blank">Обработку</a> моих персональных данных. Ознакомлен с  <a href="#" target="_blank">Правилами</a> бронирования
 
-		.tag.elem
-			.row
-				.col
-					.tag
-						a.tag__item(href='#!'): span 1 of 12
-						a.tag__item(href='#!'): span Favorite
-						a.tag__item(href='#!'): span Category
-						a.tag__item.tag__item--icon(href='#!')
-							+svg('share')
-							span SHared
+				.fb-wrap
+					.col
+						a.link.link--large.link--b-dark(href="mailto:reception@foxlodge.ru") reception@foxlodge.ru
 
-		.links.elem
-			.row
-				.col
-					a.link.link--arrow.link--blue(href='#!')
-						span Смотреть все
-						+svg('arrow')
 
-		.filters.elem
-			.row
-				.col
-					.form-filter
-						.form-filter__label Сортировать
-						select.js-select-filter(name='sort')
-							option(value='fav') Популярные
-							option(value='price') По стоимости
-							option(value='low_price') Цена убывает
-							option(value='high_price') Цена возрастает
 
-		.element.elem
-			.row
-				.col
-					.counter
-						span.counter__item.js-sub
-						span.counter__item
-							span.js-counter-text 0
-							input.js-counter-input(title='number', hidden, value='0')
-						span.counter__item.js-add
+
+
+
+		//- .select.elem
+		//- 	.row
+		//- 		.col
+		//- 			.form-select
+		//- 				span.form-select__label Select
+		//- 				select.js-select(name='state')
+		//- 					option(value='MA') Magnetic
+		//- 					option(value='GY') Gravity
+		//- 					option(value='ME') Mechanical Mechanical
+		//- 					option(value='EL') Electronic
+		//- 					option(value='EL') Electronic
+		//- 		.col
+		//- 			.form-select
+		//- 				span.form-select__label Select Input
+		//- 				select.js-select-input(name='state')
+		//- 					option(value='MA') Magnetic
+		//- 					option(value='GY') Gravity
+		//- 					option(value='ME') Mechanical
+		//- 					option(value='EL') Electronic
+		//- 					option(value='EL') Electronic
+		//- 	.row
+		//- 		.col
+		//- 			.form-select.disabled
+		//- 				span.form-select__label Select
+		//- 				select.js-select(name='state')
+		//- 					option(value='MA') Disabled
+
+
+
+
+		//- .checkbox.elem
+		//- 	.row
+		//- 		.col
+		//- 			label.form-checkbox
+		//- 				input.form-checkbox__input(type='checkbox')
+		//- 				span.form-checkbox__checkmark
+		//- 				span.form-checkbox__text Default
+		//- 		.col
+		//- 			label.form-radio
+		//- 				input.form-radio__input(type='radio' name='account')
+		//- 				span.form-radio__checkmark
+		//- 				span.form-radio__text Default
+		//- 	.row
+		//- 		.col
+		//- 			label.form-checkbox.disabled
+		//- 				input.form-checkbox__input(type='checkbox')
+		//- 				span.form-checkbox__checkmark
+		//- 				span.form-checkbox__text Default
+		//- 		.col
+		//- 			label.form-radio.disabled
+		//- 				input.form-radio__input(type='radio' name='account')
+		//- 				span.form-radio__checkmark
+		//- 				span.form-radio__text Default
+
+		//- .tooltip.elem
+		//- 	.row
+		//- 		.col
+		//- 			.js-tooltip(title='Helper Text Helper Text Helper Text Text Text')
+		//- 				.icon
+		//- 					+svg('question')
+
+		//- .tag.elem
+		//- 	.row
+		//- 		.col
+		//- 			.tag
+		//- 				a.tag__item(href='#!'): span 1 of 12
+		//- 				a.tag__item(href='#!'): span Favorite
+		//- 				a.tag__item(href='#!'): span Category
+		//- 				a.tag__item.tag__item--icon(href='#!')
+		//- 					+svg('share')
+		//- 					span SHared
+
+		//- .links.elem
+		//- 	.row
+		//- 		.col
+		//- 			a.link.link--arrow.link--blue(href='#!')
+		//- 				span Смотреть все
+		//- 				+svg('arrow')
+
+		//- .filters.elem
+		//- 	.row
+		//- 		.col
+		//- 			.form-filter
+		//- 				.form-filter__label Сортировать
+		//- 				select.js-select-filter(name='sort')
+		//- 					option(value='fav') Популярные
+		//- 					option(value='price') По стоимости
+		//- 					option(value='low_price') Цена убывает
+		//- 					option(value='high_price') Цена возрастает
+
+		//- .element.elem
+		//- 	.row
+		//- 		.col
+		//- 			.counter
+		//- 				span.counter__item.js-sub
+		//- 				span.counter__item
+		//- 					span.js-counter-text 0
+		//- 					input.js-counter-input(title='number', hidden, value='0')
+		//- 				span.counter__item.js-add
 
 		.nav.elem
 			.row
@@ -348,17 +485,17 @@ block content
 				.col
 					.navigation-arrows
 						.navigation-arrows__item
-							+svg('arrow')
+							+svg('prev')
 						.navigation-arrows__item
-							+svg('arrow')
+							+svg('next')
 
-		.buttons.elem
-			.row
-				.col
-					.btn-group
-						a.btn-group__item.btn-group__item--active(href='#!') Мероприятия 21
-						a.btn-group__item(href='#!') Мероприятия 22
-						a.btn-group__item(href='#!') Мероприятия 23
+		//- .buttons.elem
+		//- 	.row
+		//- 		.col
+		//- 			.btn-group
+		//- 				a.btn-group__item.btn-group__item--active(href='#!') Мероприятия 21
+		//- 				a.btn-group__item(href='#!') Мероприятия 22
+		//- 				a.btn-group__item(href='#!') Мероприятия 23
 
 		include pug/particles/form-example
 
@@ -371,5 +508,7 @@ block content
 					a.btn.btn--blue.js-popup-link(data-link="ajax-content" href="ajax-content-example.html" data-href="ajax-content-example.html") Ajax-попап
 				.col
 					a.btn.btn--blue.js-popup-link(data-link="video" data-src="https://www.youtube.com/embed/Euv2ramIrv4?autoplay=1") Попапа с видео
+
+
 
 

@@ -5,3 +5,47 @@ append vars
 
 block content
 	//- ...
+	section.about
+		.wrapper.wrapper--large
+			.about__part
+				.about__desc.left-indent
+					h2.title-decor Лисья нора 
+					.about__desc-unit
+						h6 Зона отдыха
+						.numeral.numeral--line-top 60 га
+						p Завтрак у озера, прогулки на свежем воздухе, чистый водоем с песчаным пляжем – все это в 39 км от Москвы.
+
+				.about__image
+					img(src="images/image-1.jpg" alt="image")
+
+	section.services
+		.wrapper.wrapper--large
+			.services__top.left-indent
+				h2 Многообразие услуг   
+				.services__desc
+					p В одном комплексе сочетаются разнообразные возможности для спорта, отдыха и восстановления сил.
+			.left-indent
+				.navigation-arrows
+					.navigation-arrows__item.js-prev-services
+						+svg('prev')
+					.navigation-arrows__item.js-next-services
+						+svg('next')
+				.services-slider.swiper-container.js-slider-services
+					.swiper-wrapper
+						.swiper-slide
+							+services('images/services-1.jpg','Спортивные площадки')
+						.swiper-slide
+							+services('images/services-2.jpg','Фитнес')
+						.swiper-slide
+							+services('images/services-3.jpg','Прогулочные маршруты')
+						.swiper-slide
+							+services('images/serivices-4.jpg','Рыбалка')
+						.swiper-slide
+							+services('images/services-2.jpg','Фитнес')
+						.swiper-slide
+							+services('images/services-3.jpg','Прогулочные маршруты')
+						.swiper-slide
+							+services('images/services-2.jpg','Фитнес')
+						.swiper-slide
+							+services('images/services-3.jpg','Прогулочные маршруты')
+

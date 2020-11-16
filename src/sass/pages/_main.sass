@@ -1,0 +1,103 @@
+.title-decor
+	margin-top: 0 
+	font-size: rem(130px)
+	line-height: 80%
+	color: white
+	background: url(../images/image-1.jpg) no-repeat
+	-webkit-background-clip: text
+	-webkit-text-fill-color: transparent
+	margin-bottom: 75px
+
+	+bp($point-4)
+		font-size: rem(90px)
+		line-height: 90%
+
+	+bp($point-2)
+		font-size: rem(48px)
+		line-height: 100%
+
+.numeral
+	font-size: rem(60px)
+	line-height: 100% 
+	color: $orange 
+	font-weight: 700
+	position: relative
+
+	&--line-top
+		padding-top: 25px
+		&:after 
+			content: ''
+			width: 35px 
+			height: 1px
+			background-color: $orange 
+			position: absolute 
+			top: 0 
+			left: 0
+
+	+bp($point-2)
+		font-size: rem(24px)
+
+.left-indent
+	padding-left: 8%
+
+.about
+	padding: 140px 0 70px
+
+	&__part 
+		display: flex 
+		justify-content: space-between
+
+	&__desc 
+		max-width: 510px
+
+		h6
+			font-weight: 500
+
+		.numeral
+			padding-bottom: 12px
+
+	&__desc-unit
+		max-width: 338px
+
+.services
+	padding: 70px 0
+	&-slider
+		overflow: visible
+		margin-top: 45px
+		padding-bottom: 100px 
+		min-width: 1500px
+
+	&-block
+		display: block 
+		color: $baseTxt 
+		border: none
+		transition: 0s
+
+		h6 
+			margin: 25px 0
+			font-weight: 500
+
+	.swiper-slide
+		opacity: 0.3
+		h6 
+			opacity: 0
+
+	.swiper-slide-visible
+		opacity: 1 
+		h6 
+			opacity: 1
+
+	h2 
+		margin-top: 0
+	&__top
+		display: flex
+	&__desc 
+		margin-left: 170px
+		max-width: 340px
+		p 
+			&:first-child
+				margin-top: 14px
+			&:last-child
+				margin-bottom: 0
+
+

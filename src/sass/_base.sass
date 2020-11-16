@@ -14,6 +14,7 @@ html, :root
 body
 	font-family: $baseFont
 	font-size: $baseRem
+	font-weight: 500
 	color: $baseTxt
 	min-width: 320px
 	padding: 0
@@ -66,9 +67,15 @@ a:active, a:visited, a:focus
 .wrapper
 	width: 100%
 	min-width: 320px
-	max-width: 1395px
+	max-width: 1300px
 	padding: 0 20px
 	margin: 0 auto
+
+	&--medium
+		max-width: 1420px
+
+	&--large
+		max-width: 1640px
 
 
 .orange

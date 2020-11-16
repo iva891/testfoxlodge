@@ -39,13 +39,14 @@
 	&__textarea 
 		height: 120px 
 		line-height: 1.5	
-		padding-top: 25px 
-		padding-bottom: 25px
+		padding-top: 12px 
+		padding-bottom: 20px
 
 		+bp($point-2)
 			height: 90px	
 	&__label
-		display: inline-block
+		display: flex 
+		align-items: center
 		position: absolute
 		top: -8px
 		left: 12px
@@ -61,7 +62,6 @@
 		// transition: .3s linear
 		&--top 
 			align-items: flex-start 
-			padding-top: 24px
 
 		+bp($point-2)
 			font-size: $input-fs-xs
@@ -86,17 +86,33 @@
 			fill: transparent
 
 	label.error
+		line-height: 41px
 		width: calc(100% - 2px)
+		height: calc(100% - 3px)
 		padding: 0 20px
 		font-weight: 600
 		color: $input-color-error
 		font-size: $input-fs
 		position: absolute 
-		top: 50% 
+		top: 50%
 		transform: translateY(-50%)
+		left: 0
 		left: 1px
 		z-index: 2
 		background-color: $white
+		&:after 
+			content: ''
+			position: absolute
+			top: 0
+			bottom: 0
+			right: 16px
+			margin: auto 0
+			width: 24px
+			height: 24px
+			transition: opacity .3s linear
+			+foil 
+			background-image: url('../images/alert.svg')
+			z-index: 3
 
 		+bp($point-2)
 			font-size: $input-fs-xs
@@ -109,27 +125,7 @@
 		// .select2-selection__placeholder
 		// 	transform: translate(0,-8px) scale(0.7)
 		
-	&--error
-		// .form-field__label,
-		// .select2-selection__placeholder
-		// 	color: $input-color-error !important
-		// 	transform: translate(0,-8px) scale(0.7)
-
-	
-		.form-field__input
-			border-color: $input-bor-color
-			color: $input-color-error
 			
-		.form-field__icon
-			opacity: 1
-			color: $input-color-error
-
-		.select2-container .select.select2-selection--single
-			border-color: $input-color-error
-			box-shadow: 0 1px 1px rgba(240, 61, 62, 0.1)
-
-		.select2-selection__arrow
-			display: none
 
 	&-textarea
 		.form-field__icon

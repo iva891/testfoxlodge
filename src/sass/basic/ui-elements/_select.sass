@@ -34,12 +34,13 @@
 				height: 48px
 				padding-left: 20px
 	.select
-		height: $input-h-large
+		height: $input-h
 		display: flex
 		align-items: center
+		border-radius: 0px
 		
 		&.select2-selection--single
-			border-radius: $input-border-radius
+			// border-radius: $input-border-radius
 			border: 1px solid $input-bor-color
 
 			+bp($point-2)
@@ -61,8 +62,8 @@
 				bottom: 0
 				right: 20px
 				margin: auto
-				height: 6px
-				width: 11px
+				height: 5px
+				width: 9px
 				b
 					width: 100%
 					height: 100%
@@ -79,6 +80,7 @@
 		transform-origin: 0 0
 
 	&--default
+		border-radius: 0px
 		.select2-selection--single 
 			.select2-selection__placeholder
 				color: $baseTxt

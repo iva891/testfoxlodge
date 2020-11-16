@@ -108,11 +108,20 @@ $(function () {
 			}
 		});
 
-	})
+	});
+
+	$B.on('click', 'label.error',function(){
+	    $(this).hide().siblings('input').focus();
+
+	});
+
+	$B.on('keypress', 'input',function(){
+	    $(this).siblings('label.error').hide();
+	});
 
 	$('#popup-thank').on('click', function(){
 		$(this).removeClass('is-show');
-	})
+	});
 
 });
 
