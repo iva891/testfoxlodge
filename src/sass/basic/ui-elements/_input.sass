@@ -24,15 +24,46 @@
 		font-size: $input-fs
 		transition: .3s linear
 		font-weight: 600
+
+		&::placeholder
+			color: 
 		
 		&:focus
 			border-color: $input-bor-color-focus
+
+		&--gray
+			background-color: $gray1
+			border-color: $gray1
+			font-weight: 500
+			padding-left: 46px
+			font-size: rem(18px)
+
+			&::placeholder
+				color: $gray3
+
+			&:focus 
+				border-color: $gray5
+
+		&--bor-orange
+			border: none
+			border-bottom: 4px solid $orange
+			font-size: rem(18px)
+			padding-left: 0
+			font-weight: 500
+
+			&::placeholder
+				color: $gray4
+				font-weight: 500
 			
 
 		+bp($point-2)
 			height: $input-h 
 			line-height: $input-h
 			font-size: $input-fs-xs
+
+			&--bor-orange
+				font-size: rem(16px)
+				border-width: 2px
 
 
 
@@ -65,6 +96,8 @@
 
 		+bp($point-2)
 			font-size: $input-fs-xs
+
+			
 		
 	&__icon
 		position: absolute
@@ -117,6 +150,8 @@
 		+bp($point-2)
 			font-size: $input-fs-xs
 
+
+
 	.select2-container
 		width: 100% !important
 		
@@ -135,4 +170,7 @@
 
 label.error
 	display: none
-			
+
+input[type="search"]
+	box-sizing: border-box
+

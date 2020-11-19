@@ -115,7 +115,7 @@ $(function () {
 
 	});
 
-	$B.on('keypress', 'input',function(){
+	$B.on('keyup', 'input',function(){
 	    $(this).siblings('label.error').hide();
 	});
 

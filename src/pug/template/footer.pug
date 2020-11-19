@@ -1,1 +1,30 @@
 footer.footer
+	.wrapper.wrapper--large
+		.footer__part 
+			.footer__menu
+				include ../particles/menu
+			.footer__block
+				.footer__data
+					.footer__coop
+						small © 2020 ООО «Лисья нора»
+						small ОГРН 1155007000037
+					.form-mailing
+						form.js-form(name="mailing" action="#")
+							label.form-field
+								input.form-field__input.form-field__input--bor-orange(name="email" type="email" placeholder="Email" data-msg="Заполните поле" required)
+							button.form-mailing__btn(type="submit") Подписаться на новости
+					.footer__links
+						a.link.link--default(href="#") Правила комплекса
+						a.link.link--default(href="#") Тарифы услуг
+				.footer__contacts
+					h6.title-line Контакты
+					a.link.link--large(href='tel:+74951209229') +7 (495) 120−92−29
+					.soc.soc--orange
+						a.soc-link(href="#")
+							.icon.icon--soc.icon--instagram
+								+svg('instagram')
+						a.soc-link(href="#")
+							.icon.icon--soc.icon--facebbok
+								+svg('facebbok')
+
+

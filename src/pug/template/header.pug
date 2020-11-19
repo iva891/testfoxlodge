@@ -1,1 +1,36 @@
-header.header
+mixin header(styleClass)
+	header.header(class= styleClass)
+		.wrapper.wrapper--line
+			.header__part
+				.header__column
+					a.logo(href="index.html")
+						img.logo-white(src="images/logo-white.svg" alt="logo")
+						img.logo-dark(src="images/logo.svg" alt="logo")
+					.header-lang
+						a.link.link--default.active(href="#") Рус
+						a.link.link--default(href="#") Eng
+				.header__column.header__column--menu
+					.btn.btn--bor-white.btn--small.header-btn-menu.js-open-menu
+						.header-btn-menu__data
+							+svg('burger')
+							span Меню
+						.header-btn-menu__data.hide
+							+svg('close-orange')
+							span Закрыть
+					nav.nav.js-nav
+						ul.nav-list
+							li.nav-item: a.link.link--default(href="#") Размещение
+							li.nav-item: a.link.link--default(href="#") Стрельба
+							li.nav-item: a.link.link--default(href="#") Развлечения
+							li.nav-item: a.link.link--default(href="#") Мероприятия
+							li.nav-item: a.link.link--default(href="#") Контакты
+							
+					include ../particles/header-search
+
+				.header__column.header__column--btn
+					a.header-icon.header-icon--lk(href="#")
+						+svg('person')
+					a.btn.btn--small(href="#") Забронировать
+
+		include ../particles/menu
+

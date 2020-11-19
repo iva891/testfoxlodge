@@ -2,7 +2,7 @@ a
 	display: inline
 	text-decoration: none
 	font-size: inherit
-	transition: 0.4s ease
+	transition: 0.3s
 	outline: none
 	color: $link-color
 	border-bottom: 1px solid transparent
@@ -22,6 +22,15 @@ a
 	font-size: $link-fs
 	line-height: $link-lh
 
+	&--default
+		color: inherit
+		font-size: inherit 
+		border: none
+		&:hover
+			color: $orange
+
+
+
 	&--icon
 		position: relative 
 		margin-left: 30px
@@ -37,6 +46,12 @@ a
 
 	&--large
 		font-size: $link-fs-large
+		color: inherit
+		border: none
+		font-weight: bold
+
+		&:hover 
+			color: $orange 
 
 	&--b-dark 
 		color: $black 
@@ -44,6 +59,14 @@ a
 		font-weight: 700
 		&:hover
 			border-color: $black
+
+	&.active
+		color: $orange
+
+
+	+bp($point-2)
+		&--large 
+			font-size: rem(16px)
 
 
 .rules 

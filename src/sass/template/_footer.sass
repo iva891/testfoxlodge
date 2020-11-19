@@ -1,0 +1,106 @@
+.footer 
+	.menu 
+		display: block !important
+		border: none
+		padding-top: 0
+		&__list 
+			margin: 0
+		.header-search
+			display: none !important
+
+	&__part 
+		display: flex
+		padding-top: 80px 
+		border-top: 1px solid $gray3
+
+	&__menu 
+		width: calc(100% - 321px)
+
+	&__block 
+		width: 321px
+		font-size: rem(16px)
+		color: $gray4
+	&__coop 
+		margin-bottom: 35px
+		small 
+			display: block
+			margin-bottom: 10px
+
+	.form-mailing
+		margin-bottom: 42px
+
+	&__links
+		.link 
+			margin-bottom: 10px 
+			display: block
+
+	&__contacts 
+		color: $baseTxt
+		h6
+			font-size: rem(16px)
+	.soc 
+		margin-top: 40px
+
+	+bp($point-5)
+		&__menu 
+			width: calc(100% - 220px)
+
+		&__block 
+			width: 220px
+
+	+bp($point-4)
+		padding-bottom: 80px
+		&__part 
+			padding-top: 60px 
+			display: block
+			margin: 0 -20px 
+			padding-left: 20px 
+			padding-right: 20px
+
+		&__menu 
+			display: none 
+		&__block 
+			display: flex 
+			justify-content: space-between 
+			width: 100% 
+		&__contacts 
+			width: 220px 
+			h6 
+				margin-top: 0
+		&__data 
+			width: calc(100% - 320px)
+
+	+bp(650px)
+		padding-bottom: 50px
+		&__data 
+			width: calc(100% - 260px)
+
+	+bp($point-2)
+		&__part 
+			padding-top: 35px
+		&__block 
+			display: block
+		&__contacts 
+			width: 100%
+			margin-top: 40px
+		&__data 
+			width: 100%
+
+
+
+
+
+.soc 
+	display: flex
+	&-link
+		display: block 
+		border: none
+		margin-right: 17px 
+		&:last-child 
+			margin-right: 0
+
+	&--orange 
+		.icon 
+			border-color: $orange
+
+

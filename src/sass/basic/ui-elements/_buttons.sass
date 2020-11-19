@@ -8,13 +8,12 @@
 	font-weight: 600
 	text-align: center
 	white-space: nowrap
-	transition: 0.5s ease
+	transition: 0.3s ease
 	cursor: pointer
-	padding: 0 30px
+	padding: 0 25px
 	border: 1px solid $orange
 	height: $btn-h
 	background-color: $btn-orange
-	min-width: 190px
 
 	&:hover
 		background-color: $btn-orange-hover
@@ -40,12 +39,30 @@
 		background-color: $white 
 		border-color: $btn-flat-bor
 		color: $baseTxt
-		min-width: 0
 
 		&:hover 
 			border-color: $btn-flat-bor-hover
 			color: $baseTxt
 			background-color: $white
+
+	&--bor-dark
+		background-color: $white 
+		border-color: $black
+		color: $baseTxt
+
+		&:hover 
+			border-color: $orange
+			color: $baseTxt
+			background-color: $white
+
+	&--bor-white
+		border-color: $white 
+		background-color: transparent
+		color: inherit
+
+		&:hover 
+			border-color: $orange
+			background-color: transparent
 
 	&--small 
 		height: $btn-h-small
@@ -53,6 +70,7 @@
 	+bp($point-2)
 		height: $btn-h-480
 		width: 100%
+		font-size: $btn-group-fs-480
 
 
 

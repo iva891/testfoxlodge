@@ -39,6 +39,12 @@ body
 .main
 	flex-grow: 1
 
+.main-top
+	padding-top: 93px
+
+	+bp($point-2)
+		padding-top: 70px
+
 img
 	max-width: 100%
 
@@ -76,6 +82,14 @@ a:active, a:visited, a:focus
 
 	&--large
 		max-width: 1640px
+
+	&--line
+		max-width: 100% 
+		padding: 0 40px 
+
+		+bp(1640px)
+			padding: 0 20px
+
 
 
 .orange

@@ -1,3 +1,4 @@
+import './header'
 import './ui-elements'
 import './slider'
 import './form'

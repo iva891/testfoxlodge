@@ -1,0 +1,122 @@
+.menu 
+	display: none
+	background-color: $white 
+	color: $baseTxt
+	width: 100% 
+	border-top: 1px solid $gray2
+	padding: 50px 0 30px
+	max-height: calc(100vh - 93px)
+	overflow-y: auto
+	&__list 
+		width: 100% 
+		display: flex 
+		margin: 0 -15px
+
+	&__column 
+		width: 25%
+		padding: 0 15px
+
+	&-block
+		display: block 
+		width: 100%
+		margin-bottom: 35px
+		h6 
+			margin-top: 0 
+			font-size: rem(16px)
+			margin-bottom: 14px
+		ul 
+			padding: 0 
+			margin: 0
+
+			li 
+				padding-left: 0 
+				color: $gray4
+				font-weight: 500
+				font-size: rem(16px)
+				margin: 12px 0
+				&:after 
+					display: none
+
+	.header-search
+		display: none !important
+		position: relative
+		left: 0 
+		top: 0 
+		transform: none
+		max-width: 100%
+
+	+bp(1150px)
+		padding-top: 23px
+		.header-search
+			display: block !important
+			margin-bottom: 35px
+
+		&__list 
+			margin: 0
+
+	+bp(701px, 'min')
+		&-block 
+			ul 
+				display: block !important 
+			h6 
+				pointer-events: none
+	+bp(700px)
+		padding-top: 0
+		&__list 
+			padding: 0 20px
+			display: block
+		.header-search
+			margin-bottom: 22px
+		&__column 
+			padding: 0
+			width: 100%
+
+		.wrapper
+			padding: 0
+
+		&-block 
+			width: 100%
+			margin-bottom: 23px
+
+			ul 
+				display: none
+				padding-top: 12px
+
+				li 
+					&:first-child
+						margin-top: 0 
+					&:last-child 
+						margin-bottom: 0
+
+			h6 
+				position: relative
+				cursor: pointer
+				margin-bottom: 0
+
+				&:after 
+					content: ''
+					position: absolute
+					right: 19px 
+					top: 50% 
+					transform: translateY(-50%) 
+					width: 12px 
+					height: 7px 
+					background-repeat: no-repeat 
+					background-size: contain 
+					background-position: center center
+					background-image: url('../images/arrow2.svg')
+					transition: 0.3s
+
+			h6.active
+				&:after 
+					transform: translateY(-50%) rotate(180deg)
+
+	+bp($point-2)
+		&-block
+			h6 
+				&:after 
+					right: 15px
+			ul 
+				li 
+					font-size: rem(14px)
+

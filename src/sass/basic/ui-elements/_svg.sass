@@ -1,7 +1,6 @@
 svg 
 	fill: transparent
 	stroke: $baseTxt
-	stroke-width: 2px
 	width: 100%
 	height: 100%
 	transition: 0.3s
@@ -29,9 +28,25 @@ svg
 		width: 48px 
 		height: 48px 
 		border: 1px solid $gray3
+		transition: 0.3s
 
 		svg 
 			stroke-width: 0
+			transition: 0.3s
+			fill: $baseTxt
+
+		&:hover 
+			border-color: $orange 
+			background-color: $orange
+
+			svg 
+				fill: $white
+
+		+bp($point-2)
+			width: 38px 
+			height: 38px
+			svg 
+				transform: scale(0.8)
 
 	&--instagram
 		svg 

@@ -1,0 +1,27 @@
+.nav
+	display: block
+	transition: 0.4s 
+	&.hide 
+		opacity: 0 
+		visibility: hidden 
+		pointer-events: none
+	&-list
+		display: flex
+		margin: 0 
+		padding: 0 
+
+	&-item
+		margin: 0
+		padding: 0 30px
+		&:after
+			display: none
+
+	+bp(1450px)
+		&-item 
+			padding: 0 10px
+
+	+bp($point-5)
+		&-item 
+			padding: 0 5px
+
+	

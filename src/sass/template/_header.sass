@@ -1,6 +1,238 @@
-.header 
-  display: block
-  
-  //пример медиазапроса
-  // @include bp($point-4)
-  //   padding: 0 20px
+.header
+	width: 100%
+	position: fixed 
+	top: 0 
+	left: 0
+	z-index: 50
+	transition: 0.3s 
+
+	&--white,
+	&.fixed
+		background-color: $white 
+		box-shadow: $shadow
+
+		.header__column
+			color: $baseTxt
+		.header-icon
+			svg 
+				stroke: $baseTxt 
+				&:hover 
+					stroke: $orange
+		.header-btn-menu 
+			border-color: $baseTxt
+			&:hover 
+				color: inherit
+				+bp(701px,min)
+					border-color: $orange
+			&__data
+				svg 
+					fill: $orange
+
+				+bp(700px)
+					&.hide 
+						svg
+							fill: $black
+
+		.header-lang 
+			.link.active
+				color: $baseTxt
+
+
+
+	&.fixed
+		.header__part
+			padding: 3px 0 4px
+
+		
+	&__part
+		+flex_between_center 
+		padding: 16px 0 13px
+		transition: 0.3s
+	&__column
+		+flex_center_v
+		position: relative
+		color: $white
+
+	&-lang
+		display: flex
+		font-size: 12px
+		color: $gray3
+
+		.link 
+			margin: 0 6px
+			text-transform: uppercase
+			font-weight: 600
+
+			&.active
+				color: $white
+
+	.logo
+		display: block
+		min-width: 62px
+		max-width: 62px
+		width: 100% 
+		margin-right: 60px
+		&-white 
+			display: block 
+		&-dark 
+			display: none 
+
+	&-btn-menu 
+		margin: 0 30px
+		padding: 0 14px
+		transition: 0.3s
+		position: relative
+
+		&__data
+			+flex_center_v
+			font-size: $baseRem
+			font-weight: 500
+			transition: 0.3s
+
+			svg 
+				width: 24px 
+				height: 24px 
+				margin-right: 10px
+				fill: $white
+				stroke-width: 0px
+
+			&.hide
+				opacity: 0
+				+center('v')
+				left: 15px
+
+
+
+	&-icon
+		width: 24px 
+		height: 24px 
+		margin-right: 40px
+		border: none
+		padding: 0
+
+		svg 
+			stroke-width: 2px
+			stroke: $white
+
+		&--search
+			position: absolute
+			+center('v')
+			left: 17px
+
+			svg 
+				stroke: $baseTxt
+
+		&:hover
+			svg
+				stroke: $orange
+	&-search
+		width: 0px 
+		overflow: hidden
+		transition: 0.4s ease-in-out
+		+center('v')
+		left: 180px 
+		max-width: 500px 
+		z-index: 3
+		.form-field
+			margin-bottom: 0 
+			width: 100%
+
+			&__input
+				padding-left: 52px
+
+	&.active-menu 
+		.header-btn-menu
+			border-color: transparent
+			&:hover 
+				border-color: transparent
+			.header-btn-menu__data 
+				opacity: 0 
+
+				&.hide 
+					opacity: 1
+		.header__column
+			.nav
+				opacity: 0 
+				pointer-events: none
+		.header-search
+			width: 100%
+
+
+	+bp(1250px)
+		.logo 
+			margin-right: 30px
+
+	+bp(1150px)
+		&__column 
+			.nav,
+			.header-search 
+				display: none !important
+
+			&--menu 
+				margin-left: auto
+
+		&-btn-menu 
+			margin-right: 55px
+
+		&-search 
+			width: 100%
+			transition: none
+		
+
+	+bp(700px)
+		&-icon 
+			&--lk 
+				display: none
+		&-btn-menu
+			border-color: $orange
+			padding: 0 9px
+			margin: 0
+			&__data 
+				span 
+					display: none
+				svg 
+					margin-right: 0
+					// fill: $black
+					width: 28px 
+					height: 28px
+
+		&__column 
+			&--menu 
+				order: 2
+				margin-left: 35px
+			&--btn 
+				margin-left: auto
+
+		&.active-menu 
+			.header-btn-menu
+				border-color: $orange
+
+				&__data.hide 
+					left: 50% 
+					transform: translateX(-50%) translateY(-50%)
+
+	+bp($point-2)
+		&.fixed
+			.header__part
+				padding: 11px 0
+		&__part
+			padding: 11px 0 
+		&-btn-menu
+			padding: 0 5px
+
+		&__column 
+			&--menu 
+				margin-left: 27px
+
+		.logo 
+			min-width: 44px 
+			max-width: 44px
+			margin-right: 20px 
+
+		&-lang 
+			display: none
+
+
+
+
+

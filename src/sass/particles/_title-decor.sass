@@ -1,0 +1,50 @@
+.title-decor
+	margin-top: 0 
+	font-size: rem(130px)
+	line-height: 80%
+	color: white
+	background: url(../images/image-1.jpg) no-repeat
+	-webkit-background-clip: text
+	-webkit-text-fill-color: transparent
+	margin-bottom: 75px
+
+	+bp($point-4)
+		font-size: rem(90px)
+		line-height: 90%
+
+	+bp($point-2)
+		font-size: rem(48px)
+		line-height: 100%
+
+.numeral
+	font-size: rem(60px)
+	line-height: 100% 
+	color: $orange 
+	font-weight: 700
+	position: relative
+
+	&--line-tops
+		padding-top: 25px
+		&:after 
+			content: ''
+			width: 35px 
+			height: 1px
+			background-color: $orange 
+			position: absolute 
+			top: 0 
+			left: 0
+
+	+bp($point-2)
+		font-size: rem(24px)
+
+.title-line
+	padding-bottom: 11px 
+	position: relative 
+	&:after 
+		content: ''
+		width: 35px 
+		height: 2px 
+		background-color: $orange 
+		position: absolute 
+		left: 0 
+		bottom: 0
