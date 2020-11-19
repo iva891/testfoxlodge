@@ -1,0 +1,51 @@
+.shooting
+    .page__banner
+    background: url('../images/shooting-banner.jpg') no-repeat
+    &__block
+        margin-top: 80px
+    &__types
+        @include flex_between_center
+    &__type
+        max-height: 450px
+        max-width: 670px
+        position: relative
+        &:nth-child(1)
+            margin-right: 20px
+        &:nth-child(2)
+            margin-left: 20px
+
+        &-content
+            position: absolute
+            bottom: 50px
+            left: 50px
+            h3
+                color: $white
+    &__rules
+        @include flex_between_center
+    &__rule
+        height: 220px
+        width: 440px
+        background: #F6F6F6
+        padding: 59px 50px
+        svg
+            width: 65px
+            height: 42px
+            stroke: $orange
+            display: inline-block
+        p 
+            line-height: 22.4px
+            max-width: 220px
+    &__room
+        @include foil
+        background: url('../images/shooting-room.jpg') 
+        color: $white
+        padding: 50px 0px 72px 50px
+        h3 
+            margin: 0 0 20px
+        p 
+            line-height: 22.4px
+            max-width: 800px
+
+
+
+

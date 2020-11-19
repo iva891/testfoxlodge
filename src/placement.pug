@@ -1,0 +1,41 @@
+extends pug/base
+
+append vars
+    - title = 'Размещение'
+
+block content
+    //- ...
+    section.placement
+        +page__banner('Идеальное место для любителей и профессионалов')
+        .wrapper.wrapper--medium
+            .placement__inner
+                .placement__block
+                    .placement-slider.swiper-container.js-slider-placement-01
+                        .swiper-wrapper
+                            .swiper-slide
+                                    img(src="images/rest/03.jpg", alt="image")
+                            .swiper-slide
+                                    img(src="images/rest/01.jpg", alt="image")
+                            .swiper-slide
+                                    img(src="images/rest/02.jpg", alt="image")
+                                    
+                        .swiper-pagination
+                        .navigation-arrows__item.prev
+                            +svg('prev')
+                        .navigation-arrows__item.next
+                            +svg('next')
+                    .placement__content
+                        h3 
+                            b RED DEER
+                        h6 Ресторан предлагает широкий выбор оригинальных блюд русской и европейской кухни. Мы сделали ставку на простоту исполнения и сезонность продуктов. В основе каждого рецепта — минимум составляющих, что наилучшим образом подчёркивает утончённый вкус каждого ингредиента. 
+                        .restaurants__details.details
+                                .details__item с 11.00 до 23.30  
+                                    +svg('clock')
+                                .details__item Летнее меню
+                                    +svg('menu')
+                                .details__item WI-FI
+                                    +svg('wi-fi')
+                                .details__item Стоянка 
+                                    +svg('car')
+                                .details__item Терраса
+                                    +svg('terrace')
