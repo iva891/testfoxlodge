@@ -62,7 +62,8 @@ html(class=html.classList)&attributes(html.attrs)
 				include template/header
 				+header('header--white')
 			main.main#main
-				block content
+				.main-top
+					block content
 			block footer 
 				include template/footer
 			block popup 

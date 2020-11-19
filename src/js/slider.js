@@ -1,10 +1,83 @@
 $(function () {
 
+//main slider
+
+// Today slider thumbs
+	  var cartThumbs = new Swiper('.js-slider-category', {
+	    slidesPerView: 3,
+	    spaceBetween: 5,
+	    freeMode: true,
+	    speed: 1000,
+	    watchSlidesProgress: true
+	  });
+
+	// Today slider main (Parallax)
+	  var cartMainSliderSelector = '.js-main-slider',
+	      interleaveOffset = 0.5;
+
+	  //count of today slider
+	  var countSliderCart = $('.js-main-slider'),
+	      itemSliderToday = $('.cart-slider__slide');
+
+	  var cartMainSliderOptions = {
+	    loop: false,
+	    speed: 1000,
+	    initialSlide: 0,
+	    grabCursor: false,
+	    simulateTouch: true,
+	    autoplay: {
+			delay: 5000
+		},
+	    watchSlidesProgress: true,
+	    thumbs: {
+	      swiper: cartThumbs
+	    },
+	    pagination: {
+	        el: '.swiper-pagination',
+	        type: 'progressbar',
+	    },
+	    on: {
+	      progress: function () {
+	        const isIE = navigator.appVersion.indexOf('Edge') > -1;
+	        if (isIE) return;
+	        var swiper = this;
+	        for (var i = 0; i < swiper.slides.length; i++) {
+	          var slideProgress = swiper.slides[i].progress,
+	            innerOffset = swiper.width * interleaveOffset,
+	            innerTranslate = slideProgress * innerOffset;
+	          swiper.slides[i].querySelector('.slider-item__block').style.transform =
+	            'translate3d(' + innerTranslate + 'px, 0, 0)';
+	        }
+	      },
+	      touchStart: function () {
+	        const isIE = navigator.appVersion.indexOf('Edge') > -1;
+	        if (isIE) return;
+	        var swiper = this;
+	        for (var i = 0; i < swiper.slides.length; i++) {
+	          swiper.slides[i].style.transition = '';
+	        }
+	      },
+	      setTransition: function (speed) {
+	        const isIE = navigator.appVersion.indexOf('Edge') > -1;
+	        if (isIE) return;
+	        var swiper = this;
+	        for (var i = 0; i < swiper.slides.length; i++) {
+	          swiper.slides[i].style.transition = speed + 'ms';
+	          swiper.slides[i].querySelector('.slider-item__block').style.transition =
+	            speed + 'ms';
+	        }
+	      }
+	    }
+	  };
+
+	  var todayMainSlider = new Swiper(cartMainSliderSelector, cartMainSliderOptions);
+
+
 //video slider events
 	let swiperServices = new Swiper('.js-slider-services', {
 		slidesPerView: 1,
 		spaceBetween: 20,
-		loop: false,
+		loop: true,
 		speed: 800,
 		watchSlidesVisibility: true,
 		breakpoints: {
@@ -24,6 +97,9 @@ $(function () {
 	$('.js-next-services').on('click', function(){
 		swiperServices.slideNext(800);  
 	});
+
+
+
 // Restaurants slider
 	let swiperRestaurants = new Swiper('.js-slider-restaurants-01', {
 		slidesPerView: 1,

@@ -1,0 +1,268 @@
+.slider
+	&__slider
+		position: relative
+	.swiper-wrapper
+		transform-style: preserve-3d
+		transition-property: all
+		backface-visibility: hidden
+		will-change: transform
+	&__wrap
+		width: 100%
+		position: relative
+	&-item
+		width: 100%
+		height: 100vh
+		transform-style: preserve-3d
+		transition-property: all
+		// backface-visibility: hidden
+		// will-change: transform
+
+		&:after
+			content: ''
+			width: 100%
+			height: 100%
+			background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%)
+			opacity: 0.7
+			position: absolute
+			left: 0
+			bottom: 0
+			z-index: 4
+			transform: matrix(1, 0, 0, -1, 0, 0)
+		&__wrap-block
+			width: 100%
+			height: 100%
+			position: relative
+			overflow: hidden
+		&__block
+			width: 100%
+			height: 100%
+			position: absolute
+			top: 0
+			left: 0
+			z-index: 1
+			text-align: center
+			transform-style: preserve-3d
+			video
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%,-50%)
+				min-width: 120%
+				max-height: 120%
+				object-fit: cover
+				z-index: 3
+		&__image
+			width: 100% 
+			height: 100% 
+			position: relative 
+			z-index: 1
+			@include foil
+				
+		&__vid-mob
+			display: none
+			
+		@include bp($point-2)
+			&__vid-mob
+				display: block
+			
+			&__vid-ps
+				display: none
+
+	&-pagination 
+		max-width: 1571px 
+		width: 100% 
+		height: 2px
+		+center('h')
+		bottom: 170px
+		background-color: $gray3 
+		opacity: 0.5
+		z-index: 5
+
+		.swiper-pagination-progressbar-fill
+			position: absolute 
+			width: 100% 
+			height: 100%
+			background: $orange
+			transform-origin: left top
+
+	&-category
+		max-width: 1571px
+		width: 100%
+		+center('h')
+		bottom: 161px
+		z-index: 6
+		color: $white
+		padding: 30px 0
+		&__item
+			cursor: pointer
+			display: flex 
+			color: $gray3
+			font-size: rem(18px)
+			opacity: 0.5
+
+			h6
+				margin: 0 
+				padding-left: 45px
+				font-weight: 500
+				line-height: 1.2
+			span 
+				line-height: 1.2
+				position: relative 
+				&:after 
+					content: ''
+					width: 10px 
+					height: 10px 
+					background-color: $gray3 
+					border-radius: 50% 
+					+center('h')
+					bottom: -25px 
+					opacity: 1
+
+			&:first-child 
+				span 
+					&:after 
+						display: none
+
+				
+			&.swiper-slide-prev,
+			&.swiper-slide-next
+				position: relative
+				z-index: 2
+
+			&.swiper-slide-thumb-active
+				color: $white
+				opacity: 1
+		&__desc
+			font-size: 15px
+			line-height: 1.5
+			margin-bottom: 35px
+			opacity: 0
+			transform: translateY(40px)
+			transform-style: preserve-3d
+			transition-property: all
+			will-change: transform
+			.link
+				margin-top: 35px
+
+		&-button
+			cursor: pointer
+			z-index: 6
+			position: absolute
+			top: 90px
+			left: 20px
+			opacity: 0.5
+			transition: $transition
+			outline: none
+			&--next
+				left: auto
+				right: 20px
+			&:hover
+				transform: translateX(-10px)
+				opacity: 1
+			&--next
+				&:hover
+					transform: translateX(10px)
+			&:focus
+				outline: none
+
+
+
+
+	@include bp(1600px)
+		&-item
+			height: 55vw
+
+
+	@include bp(1365px)
+		&-icon
+			left: 35px
+		&-category
+			width: 100%
+			padding: 40px 40px
+		&-category-button
+			left: 40px
+			top: 70px
+			&--next
+				left: auto
+				right: 40px
+
+	@include bp($point-5)
+		&-category
+			bottom: 40px
+			&__item
+				h2
+					font-size: 65px
+					margin-bottom: 40px
+				&.swiper-slide-active
+					h2
+						transform: scale(1.5)
+			&__desc
+				font-size: 14px
+
+	@include bp(1024px)
+		&-item
+			height: 500px
+			&__block
+				video
+					width: auto
+					min-height: 100%
+		&-category
+			bottom: auto
+			top: 50%
+			transform: translateX(-50%) translateY(-50%)
+			padding: 70px 20px 40px
+			height: 100%
+			.swiper-wrapper
+				align-items: center
+			&__item
+				height: auto
+				h2
+					font-size: 75px
+				&.swiper-slide-active
+					h2
+						transform: none
+			&__desc
+				max-width: 470px
+				margin: 0 auto
+		&-category-button
+			display: none
+		&-icon
+			display: none
+		&__wrap
+			&:after
+				display: none
+		&-pagination-block
+			right: auto
+			left: 50%
+			transform: translateX(-50%)
+
+	@include bp(860px)
+		&-item
+			&__block
+				video
+					min-height: 0px
+					height: 100%
+
+	@include bp($point-2)
+		&__vid-mob
+			display: block
+			
+		&__vid-ps
+			display: none
+		&-category
+			bottom: 40px
+			&__item
+				h2
+					font-size: 40px
+					letter-spacing: 0px
+					margin-bottom: 20px
+			&__desc
+				font-size: 13px
+				.link
+					margin-top: 30px
+					
+@include bp($point-2)
+	.js-today-main
+		.slider-pagination-block
+			display: none
+

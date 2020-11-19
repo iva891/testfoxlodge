@@ -1,3 +1,13 @@
+mixin sliderItem(img,video)
+	.slider-item.swiper-slide
+		.slider-item__wrap-block
+			.slider-item__block
+				.slider-item__image(style=img)
+				video.slider-item__vid-ps(loop="loop" autoplay="autoplay" muted="muted")
+					source(src=video type='video/mp4')
+				video.slider-item__vid-mob(loop="loop" autoplay="autoplay" muted="muted" playsinline)
+					source(src=video type='video/mp4')
+
 mixin services(img,name)
 	a.services-block(href="#")
 		.services-block__image

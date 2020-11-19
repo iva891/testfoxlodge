@@ -5,7 +5,26 @@ append vars
 
 block content
 	
-	section.slider(style="height: 100vh; background-color: gray; margin-top: -150px")
+	section.slider
+		.slider__wrap
+			.slider__shadow
+			.slider__slider.js-main-slider.swiper-container
+				.swiper-wrapper
+					+sliderItem('background-image: url(images/slide-1.jpg)','video/video-3.mp4')
+					+sliderItem('background-image: url(images/slide-1.jpg)','video/video-2.mp4')
+					+sliderItem('background-image: url(images/slide-1.jpg)','video/video-1.mp4')
+				.slider-pagination.swiper-pagination
+			.slider-category.js-slider-category.swiper-container
+				.swiper-wrapper
+					.slider-category__item.swiper-slide
+						span 01 
+						h6 Отдых за рубежом... Москвы
+					.slider-category__item.swiper-slide
+						span 02
+						h6 Ценителям активного отдыха
+					.slider-category__item.swiper-slide
+						span 03
+						h6 Стрельба - любителям и профессионалам
 
 	section.about
 		.wrapper.wrapper--large
