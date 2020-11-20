@@ -12,8 +12,8 @@
 	&-item
 		width: 100%
 		height: 100vh
-		transform-style: preserve-3d
-		transition-property: all
+		// transform-style: preserve-3d
+		// transition-property: all
 		// backface-visibility: hidden
 		// will-change: transform
 
@@ -21,8 +21,8 @@
 			content: ''
 			width: 100%
 			height: 100%
-			background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%)
-			opacity: 0.7
+			background: linear-gradient(180deg,#000,transparent)
+			opacity: 0.9
 			position: absolute
 			left: 0
 			bottom: 0
@@ -69,14 +69,15 @@
 				display: none
 
 	&-pagination 
-		max-width: 1571px 
+		max-width: 1600px 
 		width: 100% 
 		height: 2px
 		+center('h')
 		bottom: 170px
-		background-color: $gray3 
-		opacity: 0.5
+		background-color: rgba(202, 202, 202, 0.5)
+		opacity: 1
 		z-index: 5
+
 
 		.swiper-pagination-progressbar-fill
 			position: absolute 
@@ -86,7 +87,7 @@
 			transform-origin: left top
 
 	&-category
-		max-width: 1571px
+		max-width: 1600px
 		width: 100%
 		+center('h')
 		bottom: 161px
@@ -99,6 +100,7 @@
 			color: $gray3
 			font-size: rem(18px)
 			opacity: 0.5
+			height: auto
 
 			h6
 				margin: 0 
@@ -132,6 +134,7 @@
 			&.swiper-slide-thumb-active
 				color: $white
 				opacity: 1
+
 		&__desc
 			font-size: 15px
 			line-height: 1.5
@@ -165,83 +168,135 @@
 			&:focus
 				outline: none
 
+	&-about 
+		width: 100% 
+		position: absolute 
+		left: 0 
+		bottom: 335px 
+		z-index: 7
+		color: $white
+
+		&__part 
+			display: flex
+			align-items: flex-end 
+			justify-content: space-between 
+			max-width: 1300px
+
+			h1 
+				max-width: 760px
+				font-size: rem(130px)
+				margin: 0
+				line-height: 80%
+
+		&__desc
+			max-width: 349px 
+			margin-left: 30px
+			h6 
+				font-weight: 500
+				margin-bottom: 10px
+				margin-top: 0
+
+		.soc 
+			position: absolute 
+			top: 0 
+			right: 40px
+
+		.soc 
+			display: block
+			&-link 
+				margin: 0 0 30px
 
 
 
-	@include bp(1600px)
-		&-item
-			height: 55vw
+	+bp(1650px)
+		&-pagination,
+		&-category 
+			width: calc(100% - 40px)
 
 
 	@include bp(1365px)
 		&-icon
 			left: 35px
-		&-category
-			width: 100%
-			padding: 40px 40px
-		&-category-button
-			left: 40px
-			top: 70px
-			&--next
-				left: auto
-				right: 40px
+
+		&-about 
+			&__desc 
+				margin-right: 60px
+
 
 	@include bp($point-5)
-		&-category
-			bottom: 40px
-			&__item
-				h2
-					font-size: 65px
-					margin-bottom: 40px
-				&.swiper-slide-active
-					h2
-						transform: scale(1.5)
-			&__desc
-				font-size: 14px
+		&-about 
+			&__part 
+				display: block 
+				h1 
+					font-size: 90px
+			&__desc 
+				margin: 30px 0 
+		&-category 
+			bottom: 72px
+			&__item 
+				padding-left: 15px
+		&-pagination
+			bottom: 80px
 
-	@include bp(1024px)
-		&-item
-			height: 500px
-			&__block
-				video
-					width: auto
-					min-height: 100%
-		&-category
-			bottom: auto
-			top: 50%
-			transform: translateX(-50%) translateY(-50%)
-			padding: 70px 20px 40px
-			height: 100%
-			.swiper-wrapper
-				align-items: center
-			&__item
-				height: auto
-				h2
-					font-size: 75px
-				&.swiper-slide-active
-					h2
-						transform: none
-			&__desc
-				max-width: 470px
-				margin: 0 auto
-		&-category-button
-			display: none
-		&-icon
-			display: none
-		&__wrap
-			&:after
-				display: none
-		&-pagination-block
-			right: auto
-			left: 50%
-			transform: translateX(-50%)
 
-	@include bp(860px)
-		&-item
-			&__block
-				video
-					min-height: 0px
-					height: 100%
+
+
+	+bp($point-4)
+		&-item 
+			max-height: 960px
+
+	+bp(700px)
+		&-item 
+			height: 540px
+		&-category 
+			bottom: 110px
+			padding: 10px 0
+			width: 120px
+			margin-left: 0
+			left: 5px
+			transform: none
+			z-index: 8
+			h6 
+				display: none 
+			span
+				font-size: rem(14px) 
+				&:after 
+					display: none
+				&:before 
+					content: ''
+					width: 100% 
+					height: 3px 
+					background-color: $orange 
+					position: absolute 
+					left: 0 
+					bottom: -8px 
+					transition: 0.3s 
+					transform: scaleX(0)
+			&__item
+				&.swiper-slide-thumb-active
+					span 
+						&:before 
+							transform: scaleX(1)
+		&-about 
+			bottom: 0
+			padding-bottom: 30px
+			&__part 
+				h1 
+					font-size: rem(48px)
+					line-height: 100%
+		.soc 
+			position: static 
+			margin-top: 110px
+			display: flex 
+			padding-left: 20px
+			&-link 
+				margin-bottom: 0 
+				margin-right: 22px
+
+		&-pagination
+			display: none
+
+
 
 	@include bp($point-2)
 		&__vid-mob
@@ -249,17 +304,7 @@
 			
 		&__vid-ps
 			display: none
-		&-category
-			bottom: 40px
-			&__item
-				h2
-					font-size: 40px
-					letter-spacing: 0px
-					margin-bottom: 20px
-			&__desc
-				font-size: 13px
-				.link
-					margin-top: 30px
+		
 					
 @include bp($point-2)
 	.js-today-main

@@ -1,0 +1,128 @@
+.instagram 
+	padding-top: 1px
+	padding-bottom: 100px
+	&__label 
+		font-size: rem(16px)
+		color: $gray4
+	&__tags 
+		padding-top: 30px
+		h3 
+			margin-top: 0
+			margin-bottom: 0px
+
+	+bp(961px,'min')
+
+		h2 
+			margin-bottom: 80px
+		&__slider 
+			overflow: visible !important
+		&__part 
+			position: relative
+			transform: none !important
+			display: block 
+			transition: 0 
+			overflow: visible
+
+
+		&-block 
+			display: block
+			position: absolute
+			&__image 
+				img 
+					width: 100%
+
+			p  
+				margin: 17px 0 
+
+			&:first-child 
+				width: 31.62% !important
+				margin-top: 155px
+				position: static
+				p 
+					margin-top: 65px
+					max-width: 330px
+
+			&:nth-child(2) 
+				width: 13.55% !important
+				left: 34%
+				top: -47%
+
+				// &:after 
+				// 	content: '' 
+				// 	width: 70px 
+				// 	height: 70px 
+				// 	+foil 
+				// 	background-image: url('../images/round.svg')
+				// 	position: absolute 
+				// 	top: 60px 
+				// 	left: -25px 
+				// 	z-index: 1 
+				// 	opacity: 0.5 
+				// 	mix-blend-mode: difference
+				// 	filter: blur(4px)
+
+
+
+			&:nth-child(3) 
+				width: 25.9% !important
+				left: 54%
+				top: -57%
+				p 
+					max-width: 220px 
+
+
+			&:nth-child(4) 
+				width: 19.2% !important
+				left: 41.5%
+				top: 34%
+
+			&:nth-child(5) 
+				width: 14.75% !important
+				left: 67.5%
+				top: 59%
+				p 
+					margin-top: 65px
+					max-width: 161px
+
+			&:nth-child(6) 
+				width: 16% !important
+				left: 86% 
+				top: -16%
+				p 
+					max-width: 212px
+
+				+bp(1740px, 'min')
+					width: 20.65% 
+					left: 90%
+					top: -12%
+
+	+bp($point-4)
+		padding-bottom: 50px
+		h2 
+			margin-bottom: 50px
+		&__slider 
+			width: 420px
+			margin-left: 0
+			margin-top: 50px 
+			overflow: visible
+
+		&-block
+			width: 100%
+
+			&__image 
+				width: 100% 
+
+				img 
+					width: 100%
+
+	+bp($point-2)
+		padding-bottom: 35px
+		h2 
+			margin-bottom: 15px
+		&__slider 
+			width: 228px
+			margin-top: 30px
+		&-block 
+			&__desc 
+				p  
+					margin-top: 9px

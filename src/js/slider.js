@@ -170,7 +170,24 @@ $(function () {
 		swiperPlacement01.slideNext(800);  
 	});
 
-
-
+//instagram slider
+	let instSwiper = new Swiper('.js-slider-instagarm', {
+		slidesPerView: 1,
+		spaceBetween: 12,
+		loop: false,
+		speed: 800,
+		watchSlidesVisibility: true,
+		simulateTouch: true,
+		breakpoints: {
+			481: {
+				simulateTouch: true,
+				spaceBetween: 12
+			},
+			961: {
+				simulateTouch: false,
+				spaceBetween: 0
+			}
+		}
+	});
 
 });

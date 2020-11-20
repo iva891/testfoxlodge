@@ -25,6 +25,19 @@ block content
 					.slider-category__item.swiper-slide
 						span 03
 						h6 Стрельба - любителям и профессионалам
+			.slider-about
+				.wrapper.wrapper--large
+					.slider-about__part
+						h1 Уникальное место
+						.slider-about__desc 
+							h6 Загородный отдых для всей семьи  на обширной, охраняемой территории. 
+				.soc.soc--orange.soc--white
+					a.soc-link(href="#")
+						.icon.icon--soc.icon--instagram
+							+svg('instagram')
+					a.soc-link(href="#")
+						.icon.icon--soc.icon--facebbok
+							+svg('facebbok')
 
 	section.about
 		.wrapper.wrapper--large
@@ -69,14 +82,6 @@ block content
 							+services('images/services-2.jpg','Фитнес')
 						.swiper-slide
 							+services('images/services-3.jpg','Прогулочные маршруты')
-		
 
-	
-
-
-		
-
-
-
-
+	include pug/particles/instagram
 
