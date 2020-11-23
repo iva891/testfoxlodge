@@ -1,6 +1,4 @@
 .restaurants
-    .page__banner
-    background: url('../images/restaurants-banner.jpg') no-repeat
     &__inner
         margin-top: 110px
 
@@ -12,33 +10,14 @@
     &-slider 
         flex: 0 0 58%
         max-height: 450px
-        .navigation-arrows__item
-            position: absolute
-            top: 50%
-            transform: translateY(-50%)
-            z-index: 1
-            width: 48px
-            height: 48px
-            border: 0
-            background: $baseTxt
-            opacity: 0.3
-            svg
-                width: 16px
-                height: 16px
-                stroke: $white
-        .navigation-arrows__item.prev
-            left: 15px
-        .navigation-arrows__item.next
-            right: 15px
 
     &__content
         margin-left: 72px
         h3
             margin: 0 0 30px
-        h6
+        p
             margin: 30px 0 36px
             color: $gray4
-            font-weight: 500
             
         .details
             display: flex
