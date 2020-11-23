@@ -244,6 +244,16 @@
 	+bp($point-4)
 		&-item 
 			max-height: 960px
+		&-category 
+			&__item
+				padding-left: 0
+				h6 
+					padding-left: 20px
+					font-size: rem(16px)
+					max-width: 200px
+		&-pagination,
+		&-category 
+			width: calc(100% - 110px)
 
 	+bp(700px)
 		&-item 
@@ -253,7 +263,7 @@
 			padding: 10px 0
 			width: 120px
 			margin-left: 0
-			left: 5px
+			left: 20px
 			transform: none
 			z-index: 8
 			h6 

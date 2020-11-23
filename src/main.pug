@@ -46,7 +46,7 @@ block content
 					h2.title-decor Лисья нора 
 					.about__desc-unit
 						h6.title-line Зона отдыха
-						.numeral.numeral--line-top 60 га
+						.numeral.numeral--line-top 80 га
 						p Завтрак у озера, прогулки на свежем воздухе, чистый водоем с песчаным пляжем – все это в 39 км от Москвы.
 
 				.about__image
@@ -82,6 +82,45 @@ block content
 							+services('images/services-2.jpg','Фитнес')
 						.swiper-slide
 							+services('images/services-3.jpg','Прогулочные маршруты')
+
+	section.banner
+		.wrapper.wrapper--large
+			.banner__inner
+				.banner__part.left-indent
+					.banner__desc
+						h2 Лучший подарок для ваших друзей!
+						a.btn.btn--white.btn--small(href="#") Подарочные карты
+					.banner__image
+						img(src="images/banner-1.png"  alt="img")
+
+	section.architecture
+		.wrapper.wrapper--large
+			.architecture__part.architecture__part--top
+				.architecture__block
+					.left-indent 
+						h2 Необычная архитектура 
+				.architecture__block
+					p На территории гостиничных корпусов Бумеранг и FOX-INN каждый номер оснащен отдельным входом с улицы и террасой с видом на озеро и лесные ландшафты. 
+			.architecture__part
+				.architecture__block
+					.left-indent
+						h6 FOX-INN
+					.architecture__image 
+						img(src="images/obj-1.jpg" alt="img")
+				.architecture__block 
+					h6 Бумеранг
+					.architecture__image 
+						img(src="images/obj-2.jpg" alt="img")
+
+	img(src="images/foil-remove.jpg")
+
+
+	section.rest 
+		.wrapper.wrapper--small
+			.rest__title
+				h2 Рестораны
+				.rest-slider.js-rest-slider.swiper-container
+					.swiper-wrapper
 
 	include pug/particles/instagram
 

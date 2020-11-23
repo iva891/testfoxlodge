@@ -5,30 +5,69 @@
 		padding-left: 0
 
 .about
-	padding: 140px 0 70px
+	padding: 120px 0 55px
 
 	&__part 
 		display: flex 
 		justify-content: space-between
 
 	&__desc 
-		max-width: 510px
+		max-width: 500px
+		margin-right: 0px
+		padding-top: 20px
 
 		h6
 			font-weight: 500
 
-		.numeral
-			padding-bottom: 12px
-
 	&__desc-unit
 		max-width: 338px
 
+	+bp($point-5)
+		&__desc 
+			padding-top: 0
+
+	+bp($point-4)
+		padding-top: 90px
+		padding-bottom: 40px
+		&__part 
+			display: block 
+
+		&__desc 
+			max-width: 100% 
+			display: flex 
+			justify-content: space-between
+			padding-bottom: 20px 
+
+			h2 
+				margin-bottom: 0
+
+			h6  
+				margin-top: 20px
+		&__desc-unit
+			margin-left: 30px
+
+	+bp(700px)
+		padding: 60px 0 30px
+		&__desc
+			display: block
+			h2 
+				max-width: 300px
+		&__desc-unit 
+			margin-left: 0 
+			margin-top: 30px
+
+	+bp($point-2)
+		&__desc
+			h2 
+				max-width: 200px
+
+
+
 .services
-	padding: 70px 0
+	padding: 55px 0
 	&-slider
 		overflow: visible
 		margin-top: 45px
-		padding-bottom: 100px 
 		min-width: 1500px
 
 	&-block
@@ -38,9 +77,22 @@
 		transition: 0s
 
 		h6 
-			margin: 25px 0
+			margin: 17px 0
 			font-weight: 500
+			transition: 0.3s
 
+		&__image 
+			overflow: hidden
+			img 
+				display: block
+				transition: 1.4s ease-in-out
+				transform-origin: 50% 100%
+		&:hover
+			.services-block__image 
+				img 
+					transform: scale(1.2)
+			h6 
+				color: $orange
 	.swiper-slide
 		opacity: 0.3
 		h6 
@@ -63,5 +115,144 @@
 				margin-top: 14px
 			&:last-child
 				margin-bottom: 0
+
+	+bp(1550px)
+		&-slider 
+			min-width: 0 
+			width: 95%
+			margin-left: 0
+
+			img 
+				width: 100%
+
+	+bp($point-4)
+		padding: 40px 0
+		&__top 
+			display: block
+		&__desc 
+			margin-left: 0 
+			max-width: 547px
+		.navigation-arrows
+			display: none
+
+		&-slider 
+			margin-top: 30px
+
+	+bp($point-2)
+		padding: 30px 0
+		&-slider
+			width: 84%
+
+		.swiper-slide 
+			opacity: 1
+
+
+.banner
+	padding: 55px 0 45px
+	&__inner
+		width: 100%
+		padding: 130px 55px 131px
+		+foil 
+		color: $white 
+		background-image: url(../images/foil-2.jpg)
+	&__part 
+		display: flex 
+		justify-content: space-between
+		align-items: center
+		max-width: 1450px 
+	&__desc 
+		max-width: 582px
+		h2 
+			margin: 0 0 60px
+
+	+bp($point-4)
+		padding: 40px 0
+		margin: 0 -55px
+
+		&__part 
+			display: block
+
+		&__inner
+			padding-bottom: 0
+			background-position: 28% 50%
+		&__image 
+			margin-top: 93px
+
+			img 
+				margin-bottom: -55px
+
+	+bp(700px)
+		margin: 0 -20px
+
+	+bp($point-2)
+		padding: 15px 0 30px
+		&__desc 
+			h2 
+				max-width: 218px
+				margin-bottom: 35px
+		.btn 
+			width: auto
+
+		&__inner 
+			padding-top: 70px
+			padding-left: 40px 
+			padding-right: 40px
+		&__image
+			margin-top: 40px
+
+
+
+.architecture
+	padding: 45px 0 110px
+	&__part 
+		display: flex
+		justify-content: space-between
+		&--top 
+			padding-bottom: 30px
+	&__block 
+		width: 50%
+
+		&:nth-child(2)
+			width: 41.3%
+
+		h2 
+			margin-top: 0
+
+		h6 
+			color: $orange
+			margin-top: 0 
+			margin-bottom: 35px
+
+		.left-indent 
+			padding-left: 22%
+
+		p 
+			max-width: 414px
+
+	+bp(1400px)
+		&__block
+			.left-indent
+				padding-left: 0px
+
+	+bp($point-4)
+		padding: 90px 0 40px
+		&__block
+			width: 100%
+			margin-bottom: 35px
+			&:nth-child(2)
+				width: 100%
+
+			h6 
+				margin-bottom: 20px
+		&__part 
+			display: block 
+			padding-bottom: 0
+		&__image 
+			img 
+				width: 100%
+
+
+
+
 
 
