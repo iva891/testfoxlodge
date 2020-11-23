@@ -9,34 +9,33 @@ block content
         +page__banner('Идеальное место для любителей и профессионалов')
         .wrapper.wrapper--medium
             .shooting__inner
-                .shooting__block.shooting__types
-                    .shooting__type
-                        img(src="images/shooting-02.jpg", alt="")
-                        .shooting__type-content
-                            h3 
-                                b Стрельба по тарелочкам
-                            a.btn(href="#") Выбрать
-                    .shooting__type
-                        img(src="images/shooting-01.jpg", alt="")
-                        .shooting__type-content
-                            h3 
-                                b Стрельба по тарелочкам
-                            a.btn(href="#") Выбрать
+                .shooting__types.flbox-list
+                    +shooting__type-block('images/shooting-01.jpg', 'Стрельба по тарелочкам')
+                    +shooting__type-block('images/shooting-02.jpg', 'Стрельба по тарелочкам')
+                    +shooting__type-block('images/shooting-02.jpg', 'Стрельба по тарелочкам')
 
-                .shooting__block.shooting__rules
-                    .shooting__rule
-                        +svg('rings')
-                        p
-                            b Правила безопасности при стендовой стрельбе
-                    .shooting__rule
-                        +svg('rule')
-                        p
-                            b Правила безопасности в тире
-                    .shooting__rule
-                        +svg('ring4')
-                        p
-                            b Тарифы на услуги и на патроны
-                .shooting__block.shooting__room
+                .shooting__rules.flbox-list
+                    .shooting__rule-block.w33
+                        .shooting__rule
+                            +svg('rings')
+                            p
+                                b Правила безопасности при стендовой стрельбе
+                    .shooting__rule-block.w33
+                        .shooting__rule
+                            +svg('rule')
+                            p
+                                b Правила безопасности в тире
+                    .shooting__rule-block.w33
+                        .shooting__rule
+                            +svg('book')
+                            p
+                                b Тарифы на услуги и на патроны
+                    .shooting__rule-block.w33
+                        .shooting__rule
+                            +svg('book')
+                            p
+                                b Тарифы на услуги и на патроны
+                .shooting__room
                     h3  Оружейная мастерская
                     p На территории «Лисьей норы» работает оружейная мастерская.      Ремонт, сервисное и техническое обслуживание оружия.
                     a.btn.btn--gray(href="#") Прейскурант

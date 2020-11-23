@@ -110,9 +110,11 @@ $(function () {
 		observeParents: true,
 		pagination: {
 			el: '.swiper-pagination',
-			type: "bullets",
-
 		},
+		navigation: {
+			nextEl: '.navigation-arrows__item.next',
+			prevEl: '.navigation-arrows__item.prev',
+		  },
 	});
 	let swiperRestaurants02 = new Swiper('.js-slider-restaurants-02', {
 		slidesPerView: 1,
@@ -124,8 +126,11 @@ $(function () {
 		pagination: {
 			el: '.swiper-pagination',
 			type: "bullets",
-
 		},
+		navigation: {
+			nextEl: '.navigation-arrows__item.next',
+			prevEl: '.navigation-arrows__item.prev',
+		  },
 	});
 	let swiperRestaurants03 = new Swiper('.js-slider-restaurants-03', {
 		slidesPerView: 1,
@@ -137,16 +142,13 @@ $(function () {
 		pagination: {
 			el: '.swiper-pagination',
 			type: "bullets",
-
 		},
+		navigation: {
+			nextEl: '.navigation-arrows__item.next',
+			prevEl: '.navigation-arrows__item.prev',
+		  },
 	});
-	$('.navigation-arrows__item.prev').on('click', function(){
-		swiperRestaurants.slidePrev(800);  
-	});
-
-	$('.navigation-arrows__item.next').on('click', function(){
-		swiperRestaurants.slideNext(800);  
-	});
+	
 
 	// Placement slider
 	let swiperPlacement01 = new Swiper('.js-slider-placement-01', {
@@ -161,14 +163,18 @@ $(function () {
 			type: "bullets",
 
 		},
+		navigation: {
+			nextEl: '.navigation-arrows__item.next',
+			prevEl: '.navigation-arrows__item.prev',
+		  },
 	});
-	$('.navigation-arrows__item.prev').on('click', function(){
-		swiperPlacement01.slidePrev(800);  
-	});
+	// $('.navigation-arrows__item.prev').on('click', function(){
+	// 	swiperPlacement01.slidePrev(800);  
+	// });
 
-	$('.navigation-arrows__item.next').on('click', function(){
-		swiperPlacement01.slideNext(800);  
-	});
+	// $('.navigation-arrows__item.next').on('click', function(){
+	// 	swiperPlacement01.slideNext(800);  
+	// });
 
 //instagram slider
 	let instSwiper = new Swiper('.js-slider-instagarm', {

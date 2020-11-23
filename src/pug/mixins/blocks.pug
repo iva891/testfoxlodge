@@ -16,9 +16,8 @@ mixin services(img,name)
 
 mixin page__banner(title)
 	.page__banner
-		h2
-			b=title
-
+		h2=title
+			
 
 mixin instagram(img,desc)
 	.instagram-block.swiper-slide(class=cl)
@@ -26,3 +25,31 @@ mixin instagram(img,desc)
 			img(src=img)
 		.instagram-block__desc
 			p=desc
+
+
+mixin shooting__type-block(img, title)
+	.shooting__type
+		img(src=img alt="image")
+		.shooting__type-desc
+			h3=title
+			a(href="#").btn.btn--small Выбрать
+
+mixin navigation-arrows__items-center
+	.navigation-arrows__item.prev
+		+svg('prev')
+	.navigation-arrows__item.next
+		+svg('next')
+
+mixin placement__slider-item(img)
+	.swiper-slide
+		.placement__slider-item__block
+			.placement__slider-item__image
+				img(src=img alt="image")
+			.placement__slider-item__label
+				+svg('circle-arrow')
+				p Виртуальный тур
+				
+
+
+
+
