@@ -13,17 +13,25 @@
         &__link
             font-size: 18px
             line-height: 29px
-            color: $baseTxt
+            color: $gray4
+            padding-bottom: 5px
+            &:hover,
+            &:active
+                border-width: 3px
+                color: $baseTxt
 
 
 .placement__types-heading 
     display: flex 
     border-bottom: 1px solid $gray3
     margin-bottom: 65px
+    flex-wrap: wrap
     .col
         width: 50%
+        +bp(1024px)
+            width: 100%
         h3 
-            margin: 0 0 40px 0
+            margin-top: 0
             display: inline-block
             svg
                 display: inline-block
@@ -36,14 +44,21 @@
                     margin-left: 15px
         p 
             margin: 0 0 40px 0
+            +bp(1024px)
+                margin-bottom: 15px
 
 .placement
     &__block
         display: flex
+        margin-bottom: 80px
+        +bp(1024px)
+            flex-wrap: wrap
+
     &__slider
         width: 58%
-        .placement-slider
-            height: 450px
+        margin-bottom: 30px 
+        +bp(1024px)
+            width: 100%
         &-item 
             &__block
                 position: relative
@@ -55,42 +70,67 @@
                 margin: 15px
                 background: rgba(0, 0, 0, 0.5)
                 z-index: 10
-               
                 p
                     margin: 7.25px 18px 7.25px 0  
                     color: $white
                     line-height: 22.4px
+                    font-weight: 400
                     
                 svg
                     display: inline-block
-                    float: left
                     width: 24px
-                    height: 24px
+                    height: 13px
                     stroke: $white
                     stroke-width: 1px
+                    stroke-opacity: 0
                     margin: 0 9.5px 0 18px
 
     &__desc
         width: 42%
         padding-left: 70px
+        +bp(1050px)
+            padding-left: 45px
+        +bp(1024px)
+            width: 100%
+            padding-left: 0
+
 
 .desc 
     &__top
         display: flex 
-        margin-bottom: 30px
+        flex-wrap: wrap
+        margin-bottom: 20px
         h3 
-            margin: 0 50px 0 0
+            margin: 0 50px 10px 0
     .placement__bedsize
-        align-self: flex-end
+        margin-top: 10px
         svg
             width: 35px
             height: 24px
             stroke-width: 1px
+        .disabled
+            display: inline-block
+            position: relative
+            opacity: 0.5
+            &:after
+                position: absolute
+                top: -18px
+                right: -18px
+                content: '?'
+                width: 18px
+                height: 18px
+                background-color: $gray4
+                border-radius: 50%
+                @include flex_center_b
+                font-size: 10px 
+                color: $white
     p 
         margin: 0 
         line-height: 22.4px
     .btn
-        margin-right: 40px
+        margin: 0 40px 0 0
+    .link 
+        margin-top: 15px
   
 
 .amenities 
@@ -102,7 +142,7 @@
         flex-wrap: wrap
 
         li 
-            margin: 0 0 18px 0
+            margin: 0 0 16px 0!important
             padding: 0
             @include flex_center_v
             width: 50%
@@ -116,7 +156,7 @@
                 margin-right: 15px
             p 
                 margin: 0
-                line-height: 22.4px
+                line-height: 140%
             
 
 

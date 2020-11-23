@@ -101,99 +101,57 @@ $(function () {
 
 
 // Restaurants slider
-	let swiperRestaurants = new Swiper('.js-slider-restaurants-01', {
+	var swipes = [];
+	$('.js-slider-restaurants').each(function(i, obj){
+		swipes[i] = new Swiper(obj, {
+		effect: 'coverflow',
 		slidesPerView: 1,
-		loop: false,
-		speed: 800,
-		watchSlidesVisibility: true,
-		observer: true, 
-		observeParents: true,
+		spaceBetween: 0,
+		loop: true,
+		speed: 1200,
+		autoHeight: true,
+		centeredSlides: true,
 		pagination: {
 			el: '.swiper-pagination',
-		},
+		  },
 		navigation: {
 			nextEl: '.navigation-arrows__item.next',
-			prevEl: '.navigation-arrows__item.prev',
-		  },
-	});
-	let swiperRestaurants02 = new Swiper('.js-slider-restaurants-02', {
-		slidesPerView: 1,
-		loop: false,
-		speed: 800,
-		watchSlidesVisibility: true,
-		observer: true, 
-		observeParents: true,
-		pagination: {
-			el: '.swiper-pagination',
-			type: "bullets",
-		},
-		navigation: {
-			nextEl: '.navigation-arrows__item.next',
-			prevEl: '.navigation-arrows__item.prev',
-		  },
-	});
-	let swiperRestaurants03 = new Swiper('.js-slider-restaurants-03', {
-		slidesPerView: 1,
-		loop: false,
-		speed: 800,
-		watchSlidesVisibility: true,
-		observer: true, 
-		observeParents: true,
-		pagination: {
-			el: '.swiper-pagination',
-			type: "bullets",
-		},
-		navigation: {
-			nextEl: '.navigation-arrows__item.next',
-			prevEl: '.navigation-arrows__item.prev',
-		  },
-	});
-	
-
-	// Placement slider
-	let swiperPlacement01 = new Swiper('.js-slider-placement-01', {
-		slidesPerView: 1,
-		loop: false,
-		speed: 800,
-		watchSlidesVisibility: true,
-		observer: true, 
-		observeParents: true,
-		pagination: {
-			el: '.swiper-pagination',
-			type: "bullets",
-
-		},
-		navigation: {
-			nextEl: '.navigation-arrows__item.next',
-			prevEl: '.navigation-arrows__item.prev',
-		  },
-	});
-	// $('.navigation-arrows__item.prev').on('click', function(){
-	// 	swiperPlacement01.slidePrev(800);  
-	// });
-
-	// $('.navigation-arrows__item.next').on('click', function(){
-	// 	swiperPlacement01.slideNext(800);  
-	// });
-
-//instagram slider
-	let instSwiper = new Swiper('.js-slider-instagarm', {
-		slidesPerView: 1,
-		spaceBetween: 12,
-		loop: false,
-		speed: 800,
-		watchSlidesVisibility: true,
-		simulateTouch: true,
-		breakpoints: {
-			481: {
-				simulateTouch: true,
-				spaceBetween: 12
-			},
-			961: {
-				simulateTouch: false,
-				spaceBetween: 0
-			}
+			prevEl: '.navigation-arrows__item.prev'
 		}
+		});
 	});
+
+// Placement slider
+	var swipes = [];
+	$('.js-slider-placement').each(function(i, obj){
+		swipes[i] = new Swiper(obj, {
+		effect: 'coverflow',
+		slidesPerView: 1,
+		spaceBetween: 0,
+		loop: true,
+		speed: 1200,
+		centeredSlides: true,
+		navigation: {
+			nextEl: '.navigation-arrows__item.next',
+			prevEl: '.navigation-arrows__item.prev'
+		},
+		pagination: {
+			el: '.swiper-pagination',
+		  },
+		});
+	});
+
+	$(".types-placement__list").on("click","a", function (event) {
+		event.preventDefault();
+		var id  = $(this).attr('href'),
+		top = $(id).offset().top;
+		$('body,html').animate({scrollTop: top-100}, 1500);
+		
+	});
+		
 
 });
+
+
+
+	
