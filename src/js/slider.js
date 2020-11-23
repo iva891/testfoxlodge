@@ -77,12 +77,15 @@ $(function () {
 	let swiperServices = new Swiper('.js-slider-services', {
 		slidesPerView: 1,
 		spaceBetween: 20,
-		loop: true,
-		speed: 800,
+		loop: false,
+		speed: 1200,
 		watchSlidesVisibility: true,
 		breakpoints: {
-			650: {
+			480: {
 				slidesPerView: 2
+			},
+			960: {
+				slidesPerView: 3
 			},
 			1300: {
 				slidesPerView: 4
