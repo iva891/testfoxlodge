@@ -12,84 +12,19 @@ block content
                 .placement__types.types-placement
                     ul.types-placement__list
                         li
-                            a(href="#").types-placement__link Бумеранг
+                            a(href="#bumerang").types-placement__link.active Бумеранг
                         li
-                            a(href="#").types-placement__link Коттеджи
+                            a(href="#cottege").types-placement__link Коттеджи
                         li
-                            a(href="#").types-placement__link FOX-INN
+                            a(href="#fox-inn").types-placement__link FOX-INN
                         li
-                            a(href="#"
-                            ).types-placement__link Лоджи Highlands
-                
-                .placement__types-heading
-                    .col
-                        h3 Бумеранг
-                            +svg('star')
-                            +svg('star')
-                            +svg('star')
-                            +svg('star')
-                            +svg('star')
-                    .col
-                        p Уютная гостиница, с просторными апартаментами, построена из эко-материалов по авторскому проекту. В каждом номере – отдельная терраса.
-                .placement__block
-                    .placement__slider
-                        .placement-slider.swiper-container.js-slider-placement-01
-                            .swiper-wrapper
-                                +placement__slider-item('images/placement/01.jpg')
-                                +placement__slider-item('images/placement/02.jpg')
-                                +placement__slider-item('images/placement/03.jpg')
-                                +placement__slider-item('images/placement/04.jpg')
-                                
-                            .swiper-pagination
-                            .navigation-arrows__items-center
-                                +navigation-arrows__items-center
-                    .placement__desc.desc
-                        .desc__top
-                            h3 Сюит  
-                            .placement__bedsize
-                                +svg('bed')
-                                +svg('bed')
-                                +svg('bed')
-                                +svg('bed-light')
-                        p 4-комнатные апартаменты, 105 м2 
-                        p Вмещает до 8 гостей
-                        .placement__amenities.amenities
-                            ul.amenities__list
-                                li 
-                                    +svg('TV')
-                                    p Телевизор (НТВ+)
-                                li 
-                                    +svg('kitchen')
-                                    p Мини-кухня
-                                li 
-                                    +svg('ref')
-                                    p Холодильник
-                                li 
-                                    +svg('wave')
-                                    p Микроволновая печь
-                                li 
-                                    +svg('cond')
-                                    p Кондиционер
-                                li 
-                                    +svg('kettle')
-                                    p Электрический чайник
-                                li 
-                                    +svg('shower')
-                                    p 2 душевых кабины
-                                li 
-                                    +svg('bath')
-                                    p 2 ванны
-                                li 
-                                    +svg('wi-fi')
-                                    p WI-FI
-                                li 
-                                    +svg('car')
-                                    p Стоянка для 2 а/м
-                                li 
-                                    +svg('terrace')
-                                    p Терраса
-                                
-                        a(href="#").btn.btn--large Забронировать
-                        a(href="#").link Тарифы на размещение
+                            a(href="#lodge").types-placement__link Лоджи Highlands
 
-                                
+                .placement__type#bumerang
+                    include pug/particles/bumerang
+                .placement__type#cottege
+                    include pug/particles/cottege
+                .placement__type#fox-inn
+                    include pug/particles/fox-inn
+                    
+                
