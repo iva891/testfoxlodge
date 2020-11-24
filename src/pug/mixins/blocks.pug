@@ -48,6 +48,15 @@ mixin placement__slider-item(img)
 			.placement__slider-item__label
 				+svg('circle-arrow')
 				p Виртуальный тур
+
+mixin restBlock(title,text,img)
+	.rest-block.swiper-slide
+		.rest-block__part 
+			.rest-block__desc 
+				h4=title
+				p=text
+			.rest-block__image
+				img(src=img)
 				
 
 

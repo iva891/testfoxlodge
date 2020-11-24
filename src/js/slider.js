@@ -199,4 +199,74 @@ $(function () {
 		}
 	});
 
+
+//rest slider
+	if ($W.width() > 960) {
+			let restSwiper = new Swiper('.js-rest-slider', {
+				slidesPerView: 1,
+				spaceBetween: 20,
+				loop: false,
+				speed: 800,
+				effect: 'fade',
+				simulateTouch: true,
+				navigation: {
+					nextEl: '.js-next-rest',
+					prevEl: '.js-prev-rest',
+				},
+				breakpoints: {
+					961: {
+						spaceBetween: 0
+					},
+				}
+			});
+	} else {
+		let restSwiper = new Swiper('.js-rest-slider', {
+			slidesPerView: 1,
+			spaceBetween: 20,
+			loop: false,
+			speed: 800,
+			simulateTouch: true,
+			navigation: {
+				nextEl: '.js-next-rest',
+				prevEl: '.js-prev-rest',
+			},
+			breakpoints: {
+				961: {
+					spaceBetween: 0
+				},
+			}
+		});
+	}
+
+//events slider
+	let restSwiper = new Swiper('.js-events-slider', {
+		effect: 'coverflow',
+		slidesPerView: 1,
+		spaceBetween: 0,
+		loop: false,
+		speed: 800,
+		simulateTouch: true,
+		coverflowEffect: {
+	        rotate: 50,
+	        stretch: 0,
+	        depth: 100,
+	        modifier: 1,
+	        slideShadows: true,
+	      },
+		navigation: {
+			nextEl: '.js-next-event',
+			prevEl: '.js-prev-event',
+		},
+		breakpoints: {
+			481: {
+				spaceBetween: 20
+			},
+			961: {
+				spaceBetween: 50
+			},
+			1211: {
+				spaceBetween: 90
+			},
+		}
+	});
 });

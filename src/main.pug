@@ -117,10 +117,74 @@ block content
 
 	section.rest 
 		.wrapper.wrapper--small
-			.rest__title
-				h2 Рестораны
+			.rest__inner
+				.rest__title
+					h2 Рестораны
 				.rest-slider.js-rest-slider.swiper-container
 					.swiper-wrapper
+						+restBlock('RED DEER','Бар, ресторан с русской и европейской кухней, фирменными деликатесами и разнообразной винной картой. К столу - свежие фермерские продукты, которые можно купить и для дома. ','images/rest-1.jpg')
+						+restBlock('СПА-Кафе','Бар, ресторан с русской и европейской кухней, фирменными деликатесами и разнообразной винной картой. К столу - свежие фермерские продуктыдля дома.','images/rest-1.jpg')
+						+restBlock('RED DEER','Бар, ресторан с русской и европейской кухней, фирменными деликатесами и разнообразной винной картой. К столу - свежие фермерские продукты, которые можно купить и для дома. ','images/rest-1.jpg')
+						+restBlock('СПА-Кафе','Бар, ресторан с русской и европейской кухней, фирменными деликатесами и разнообразной фермерские продукты, которые можно купить и для дома.','images/rest-1.jpg')
+					.navigation-arrows
+						.navigation-arrows__item.js-prev-rest
+							+svg('prev')
+						.navigation-arrows__item.js-next-rest
+							+svg('next')
+
+	section.spa 
+		.wrapper
+			.spa__part
+				.spa__image 
+					img(src="images/spa-1.jpg" alt="image") 
+				.spa__image.spa__image--right
+					img(src="images/spa-2.jpg" alt="image") 
+				.spa-desc
+					h2 FOXLAND  SPA
+					p SPA с уникальным набором услуг в эко-стиле, уходы для лица и тела на основе натуральных компонентов от ведущих мировых брендов. Баня с купелью в чистейшем озере.
+
+	section.complex
+		.wrapper
+			.complex__title
+				h2 Стрелковый комплекс
+			.complex__part
+				.complex__block
+					.complex__image2 
+						img(src="images/complex-1.jpg" alt="image") 
+					.spa-desc
+						h2 Стрелковый комплекс
+						h4 Крупнейший стрелковый комплекс в Европе
+						p Тренировки круглый год на площадках  для спортинга в естественном природном ландшафте либо в пулевых тирах открытого и закрытого типа. Можно заказать услуги инструктора по стрельбе, приобрести в магазине одежду и спортивное снаряжение, отремонтировать оружие в нашей мастерской. 
+				.complex__image 
+					img(src="images/complex-2.jpg" alt="image") 
+
+	section.events
+		.wrapper
+			h2 Мероприятия 
+			.events__top 
+				.events__title
+					h4 Прекрасная площадка для проведения корпоративных и частных мероприятий любого формата и масштаба. 
+				.events__desc
+					p Команда опытных event-менеджеров и дизайнеров поможет воплотить в жизнь ваши самые креативные идеи, подготовит оригинальный сценарий и оформление любого события.
+			.events-slider.js-events-slider.swiper-container
+				.swiper-wrapper
+					.events-block.swiper-slide
+						img(src="images/events-1.jpg" alt="image")
+					.events-block.swiper-slide
+						img(src="images/events-1.jpg" alt="image")
+					.events-block.swiper-slide
+						img(src="images/events-1.jpg" alt="image")
+					.events-block.swiper-slide
+						img(src="images/events-1.jpg" alt="image")
+				.navigation-arrows.navigation-arrows--white
+					.navigation-arrows__item.js-prev-event
+						+svg('prev')
+					.navigation-arrows__item.navigation-arrows__item--right.js-next-event
+						+svg('next')
+
+
+
+
 
 	include pug/particles/instagram
 
