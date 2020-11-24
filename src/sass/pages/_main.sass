@@ -250,9 +250,11 @@
 		&__image 
 			img 
 				width: 100%
+	+bp($point-2)
+		padding-bottom: 30px
 
 .rest 
-	padding: 70px 0 50px
+	padding: 50px 0
 	&-block
 		&__part 
 			width: 100% 
@@ -347,7 +349,7 @@
 					margin-top: 40px
 
 	+bp($point-2)
-		padding-top: 40px
+		padding-top: 35px
 		padding-bottom: 15px
 		&__title
 			margin-bottom: 27px
@@ -581,9 +583,160 @@
 			margin-bottom: 24px
 
 
+.content
+	width: 100% 
+	position: relative
+	margin-bottom: -10px
+
+	&.active 
+		.content__video-bar
+			opacity: 1	
+	&__preview 
+		width: 100% 
+		height: 100% 
+		position: absolute 
+		top: 0 
+		left: 0 
+		z-index: 2 
+		background-repeat: no-repeat 
+		background-position: center center 
+		background-size: cover 
+		background-image: url('../images/focus.jpg')
+
+	&__video 
+		width: 100%
+
+	&__icon 
+		width: 136px 
+		height: 136px
+		+center('both')
+		z-index: 2
+		cursor: pointer
+
+		.icon 
+			stroke: none 
+			transform: scale(0.5)
+			transform-origin: 50% 50%
+
+		.stroke-solid
+			opacity: 0.3
+
+
+		@include bp(700px)
+			width: 90px 
+			height: 90px
+
+	&__video-bar 
+		position: absolute 
+		left: 0
+		bottom: 125px
+		right: 0 
+		margin: auto 
+		width: 80% 
+		height: 3px
+		background-color: hsla(0,0%,100%,.2) 
+		overflow: hidden 
+		cursor: move 
+		touch-action: pan-y
+		user-select: none
+		@include bp(700px)
+			bottom: 25px
+			
+	&__video-progress
+		display: block 
+		width: 100% 
+		height: 100% 
+		background-color: $white 
+		transform: scaleX(0) 
+		transform-origin: 0 0 
+		position: relative 
+		z-index: 1
+	&__video-drag
+		width: 1px 
+		height: 20px 
+		top: -10px 
+		position: absolute 
+		z-index: 2 
+		transform-origin: 0 0
+
+.stroke-dotted 
+  opacity: 0
+  stroke-dasharray: 4,5
+  stroke-width: 1px
+  transform-origin: 50% 50%
+  transition: opacity 1s ease, stroke-width 1s ease
+.stroke-solid 
+  stroke-dashoffset: 0
+  stroke-dasharray: 300
+  stroke-width: 1px
+  transition: stroke-dashoffset 1s ease, opacity 1s ease
+
+.icon
+  transform-origin: 50% 50%;
+  transition: transform 200ms ease-out
+
+
+.content__icon:hover
+  .stroke-dotted
+    stroke-width: 1px
+    opacity: 0.7
+    animation: spin 4s infinite linear
+  .stroke-solid 
+    opacity: 0
+    stroke-dashoffset: 300
+  .icon
+    transform: scale(0.7)
 
 
 
+@keyframes spin
+  to
+    transform: rotate(360deg)
+
+.video-content 
+	&__block 
+		width: calc(100% - 660px)
+		background-color: $white 
+		margin-top: -80px
+		position: relative 
+		z-index: 3
+		padding: 70px 0 15px
+		&:before 
+			content: ''
+			width: 2000px 
+			height: 100% 
+			position: absolute 
+			top: 0 
+			right: 99%
+			background-color: $white
+	&__unit 
+		max-width: 453px 
+		padding-left: 50px 
+		position: relative
+		&:before 
+			content: ''
+			width: 1px 
+			height: 90% 
+			+center('h')
+			left: 0 
+			background-color: $orange
+		p  
+			margin: 0
+
+	+bp($point-5)
+		&__block 
+			width: auto 
+			display: inline-block
+			padding-right: 40px
+
+	+bp(650px)
+		&__block 
+			margin: 10px 0 0
+			width: 100% 
+			padding-top: 22px
+			padding-right: 0
+		&__unit 
+			padding-left: 25px
 
 
 
