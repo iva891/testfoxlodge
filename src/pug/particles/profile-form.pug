@@ -1,0 +1,194 @@
+.form-block
+    h5 Контактные данные
+    form.form.js-form(action='#')
+        .form-row
+            .form-col
+                label.form-field
+                    input.js-input.form-field__input(type='text', name="surname", data-msg="Заполните форму" required)
+                    span.form-field__label Фамилия
+                    span.form-field__icon
+
+            .form-col
+                label.form-field
+                    input.js-input.js-input-mask.form-field__input(type='text', name="name",  data-msg="Заполните форму" required)
+                    span.form-field__label Имя
+                    span.form-field__icon
+
+            .form-col
+                label.form-field
+                    input.js-input.js-input-mask.form-field__input(type='text', name=" ",  data-msg="Заполните форму" required)
+                    span.form-field__label Отчество
+                    span.form-field__icon
+
+            .form-col
+                label.form-field
+                    input.js-input.js-input-mask.form-field__input(type='tel', name="tel", data-mask="+7(999)999-99-99" data-msg="Заполните форму" required)
+                    span.form-field__label Ваш телефон
+                    span.form-field__icon
+
+            .form-col
+                label.form-field
+                    input.js-input.js-input-mask.form-field__input(type='email', name="email", data-msg="Заполните форму" required)
+                    span.form-field__label Email
+                    span.form-field__icon
+
+            .form-col
+            .form-bottom
+                button.submit.btn.btn--red.btn--small(type="submit" disabled='disabled') Сохранить
+
+.form-block.bank-card
+    form.form.js-form(action='#')
+        .form-row
+            .bank-card__img
+                img(src="images/bank-card.jpg", alt="")
+            .bank-card__label Номер карты Foxcard
+            .bank-card__number 2432 3546 2712
+            .bank-card__validity Срок действия до 06. 2021
+
+.form-block.guest-block
+    h5 Данные гостей
+    form.form.js-form(action='#')
+        .form-row
+            .form-col
+                label.form-field
+                    input.js-input.form-field__input(type='text', name="surname", data-msg="Заполните форму" required)
+                    span.form-field__label Фамилия
+                    span.form-field__icon
+
+            .form-col
+                label.form-field
+                    input.js-input.js-input-mask.form-field__input(type='text', name="name",  data-msg="Заполните форму" required)
+                    span.form-field__label Имя
+                    span.form-field__icon
+
+            .form-col
+                label.form-field
+                    input.js-input.js-input-mask.form-field__input(type='text', name=" ",  data-msg="Заполните форму" required)
+                    span.form-field__label Отчество
+                    span.form-field__icon
+
+            .form-delete
+                a(href="").link удалить
+
+            .form-col
+                label.form-field
+                    input.js-input.form-field__input(type='text', name="surname", data-msg="Заполните форму" required)
+                    span.form-field__label Фамилия
+                    span.form-field__icon
+
+            .form-col
+                label.form-field
+                    input.js-input.js-input-mask.form-field__input(type='text', name="name",  data-msg="Заполните форму" required)
+                    span.form-field__label Имя
+                    span.form-field__icon
+
+            .form-col
+                label.form-field
+                    input.js-input.js-input-mask.form-field__input(type='text', name=" ",  data-msg="Заполните форму" required)
+                    span.form-field__label Отчество
+                    span.form-field__icon
+
+            .form-delete
+                a(href="").link удалить
+
+            .form-col
+                label.form-field
+                    input.js-input.form-field__input(type='text', name="surname", data-msg="Заполните форму" required)
+                    span.form-field__label Фамилия
+                    span.form-field__icon
+
+            .form-col
+                label.form-field
+                    input.js-input.js-input-mask.form-field__input(type='text', name="name",  data-msg="Заполните форму" required)
+                    span.form-field__label Имя
+                    span.form-field__icon
+
+            .form-col
+                label.form-field
+                    input.js-input.js-input-mask.form-field__input(type='text', name=" ",  data-msg="Заполните форму" required)
+                    span.form-field__label Отчество
+                    span.form-field__icon
+
+            .form-delete
+                a(href="").link удалить
+
+
+        .form-bottom
+            .form-col        
+                button.submit.btn.btn--red.btn--small(type="submit" disabled='disabled') Сохранить
+            .form-col
+                a(href="").link.link--icon
+                    +svg("add")
+                    span Добавить гостя
+
+
+
+
+.form-block.vehicles-block
+    h5 Транспортные средства
+    form.form.js-form(action='#')
+        .form-row
+            .form-col
+                .form-field.form-select
+                    select.js-select(name='example' data-placeholder="Автомобиль" data-msg="Заполните форму" required)
+                        option(value='') 
+                        option(value='GY') Gravity
+                        option(value='ME') Mechanical
+                        option(value='EL') Electronic
+                        option(value='EL') Electronic
+                    .form-field__icon
+                    span.form-field__label Транспортное средство
+            .form-col
+                label.form-field
+                    input.js-input.form-field__input(type='text', name="surname", data-msg="Заполните форму" required)
+                    span.form-field__label Транспортное средство
+                    span.form-field__icon
+            .form-col
+                a(href="").link удалить
+
+            .form-col
+                .form-field.form-select
+                    select.js-select(name='example' data-placeholder="Мотоцикл" data-msg="Заполните форму" required)
+                        option(value='') 
+                        option(value='GY') Gravity
+                        option(value='ME') Mechanical
+                        option(value='EL') Electronic
+                        option(value='EL') Electronic
+                    .form-field__icon 
+                    span.form-field__label Транспортное средство
+            .form-col
+                label.form-field
+                    input.js-input.js-input-mask.form-field__input(type='text', name="name",  data-msg="Заполните форму" required)
+                    span.form-field__label Марка, тип, регистрационный номер
+                    span.form-field__icon
+            .form-col
+                a(href="").link удалить
+
+        .form-bottom
+            .form-col
+                button.submit.btn.btn--red.btn--small(type="submit" disabled='disabled') Сохранить
+            .form-col
+                a(href="").link.link--icon
+                    +svg("add")
+                    span Добавить ТС
+            .form-col
+
+.form-block.email-block 
+    h5 Управление Email рассылками
+    form.form.js-form(action='#')
+        .form-row
+            .form-col
+                .switch-block
+                    label(for="#switch1").switch
+                        input(type="checkbox")#switch1
+                        span.slider
+                p Подписка на рассылку новостей
+            .form-col
+                .switch-block
+                    label(for="#switch1").switch
+                        input(type="checkbox")#switch1
+                        span
+                p Подписка на рассылку мероприятий
+
+
+

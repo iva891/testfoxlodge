@@ -4,118 +4,122 @@ append vars
     - title = 'Главная'
 
 block content
-    //- ...
+
+    section.restaurants__banner
+        +page-banner('images/restaurants-banner.jpg','Широкий выбор оригинальных блюд русской и европейской кухни')
     section.restaurants
-        +page__banner('Широкий выбор оригинальных блюд русской и европейской кухни')
         .wrapper.wrapper--medium
-            .restaurants__inner
-                .restaurants__block
-                    .restaurants__slider
-                        .restaurants-slider.swiper-container.js-slider-restaurants
-                            .swiper-wrapper
-                                .swiper-slide
-                                        img(src="images/rest/03.jpg", alt="image")
-                                .swiper-slide
-                                        img(src="images/rest/02.jpg", alt="image")
-                                .swiper-slide
-                                        img(src="images/rest/01.jpg", alt="image")
-                                        
-                            .swiper-pagination.swiper-pagination-center
-                            .navigation-arrows__items-center
-                                +navigation-arrows__items-center
-                    .restaurants__content
-                        h3 RED DEER  
-                        p Ресторан предлагает широкий выбор оригинальных блюд русской и европейской кухни. Мы сделали ставку на простоту исполнения и сезонность продуктов. В основе каждого рецепта — минимум составляющих, что наилучшим образом подчёркивает утончённый вкус каждого ингредиента. 
-                        .restaurants__details.details
-                                .details__item 
-                                    +svg('clock')
-                                    span с 11.00 до 23.30  
-                                .details__item 
-                                    +svg('menu')
-                                    span Летнее меню
-                                .details__item 
-                                    +svg('wi-fi')
-                                    span WI-FI
-                                .details__item  
-                                    +svg('car')
-                                    span Стоянка
-                                .details__item 
-                                    +svg('terrace')
-                                    span Терраса
-                        a.btn.btn--red.btn--large Забронировать
-                        a.link(href="") Смотреть меню PDF
+            .restaurants__block
+                .restaurants__slider
+                    .restaurants-slider.swiper-container.js-slider-restaurants
+                        .swiper-wrapper
+                            .swiper-slide
+                                img(src="images/rest/03.jpg", alt="image")
+                            .swiper-slide
+                                img(src="images/rest/02.jpg", alt="image")
+                            .swiper-slide
+                                img(src="images/rest/01.jpg", alt="image")
 
-                .restaurants__block
-                    .restaurants__slider
-                        .restaurants-slider.swiper-container.js-slider-restaurants
-                            .swiper-wrapper
-                                .swiper-slide
-                                        img(src="images/rest/01.jpg", alt="image")
-                                .swiper-slide
-                                        img(src="images/rest/03.jpg", alt="image")
-                                .swiper-slide
-                                        img(src="images/rest/02.jpg", alt="image")
-                                        
-                            .swiper-pagination
-                            .navigation-arrows__items-center
-                                +navigation-arrows__items-center
-                    .restaurants__content
-                        h3 СПА-Кафе
-                        p Коллекция вин впечатлит ценителей благородных напитков. Лёгкие и аппетитные лакомства из детского меню придутся по вкусу самым разборчивым маленьким гурманам и их родителям.
-                        .restaurants__details.details
-                                .details__item 
-                                    +svg('clock')
-                                    span с 11.00 до 23.30  
-                                .details__item 
-                                    +svg('menu')
-                                    span Летнее меню
-                                .details__item 
-                                    +svg('wi-fi')
-                                    span WI-FI
-                                .details__item  
-                                    +svg('car')
-                                    span Стоянка
-                                .details__item 
-                                    +svg('terrace')
-                                    span Терраса
-                        a.btn.btn--red.btn--large Забронировать
-                        a.link(href="") Смотреть меню PDF
+                        .swiper-pagination.swiper-pagination-center
+                        .navigation-arrows__items-center
+                            +navigation-arrows__items-center
+                .restaurants__content
+                    h3 RED DEER  
+                    p Ресторан предлагает широкий выбор оригинальных блюд русской и европейской кухни. Мы сделали ставку на простоту исполнения и сезонность продуктов. В основе каждого рецепта — минимум составляющих, что наилучшим образом подчёркивает утончённый вкус каждого ингредиента. 
+                    .restaurants__details.details
+                        .details__item 
+                            +svg('clock')
+                            span с 11.00 до 23.30  
+                        .details__item  
+                            +svg('car')
+                            span Стоянка
+                        .details__item 
+                            +svg('menu')
+                            span Летнее меню
+                        .details__item 
+                            +svg('terrace')
+                            span Терраса
+                        .details__item 
+                            +svg('wi-fi')
+                            span WI-FI
 
-                .restaurants__block
-                    .restaurants__slider
-                        .restaurants-slider.swiper-container.js-slider-restaurants
-                            .swiper-wrapper
-                                .swiper-slide
-                                        img(src="images/rest/02.jpg", alt="image")
-                                .swiper-slide
-                                        img(src="images/rest/02.jpg", alt="image")
-                                .swiper-slide
-                                        img(src="images/rest/03.jpg", alt="image")
-                                        
-                            .swiper-pagination
-                            .navigation-arrows__items-center
-                                +navigation-arrows__items-center
-                    .restaurants__content
-                        h3 Барбекю
-                        p Мы сделали ставку на простоту исполнения и сезонность продуктов. В основе каждого рецепта — минимум составляющих, что наилучшим образом подчёркивает утончённый вкус каждого ингредиента.
-                        .restaurants__details.details
-                                .details__item 
-                                    +svg('clock')
-                                    span с 11.00 до 23.30  
-                                .details__item 
-                                    +svg('menu')
-                                    span Летнее меню
-                                .details__item 
-                                    +svg('wi-fi')
-                                    span WI-FI
-                                .details__item  
-                                    +svg('car')
-                                    span Стоянка
-                                .details__item 
-                                    +svg('terrace')
-                                    span Терраса
-                        a.btn.btn--red.btn--large Забронировать
-                        a.link(href="") Смотреть меню PDF
+
+                    a.btn.btn--red.btn--large Забронировать
+                    a.link(href="") Смотреть меню PDF
+    section.restaurants
+        .wrapper.wrapper--medium
+            .restaurants__block
+                .restaurants__slider
+                    .restaurants-slider.swiper-container.js-slider-restaurants
+                        .swiper-wrapper
+                            .swiper-slide
+                                img(src="images/rest/01.jpg", alt="image")
+                            .swiper-slide
+                                img(src="images/rest/03.jpg", alt="image")
+                            .swiper-slide
+                                img(src="images/rest/02.jpg", alt="image")
+
+                        .swiper-pagination
+                        .navigation-arrows__items-center
+                            +navigation-arrows__items-center
+                .restaurants__content
+                    h3 СПА-Кафе
+                    p Коллекция вин впечатлит ценителей благородных напитков. Лёгкие и аппетитные лакомства из детского меню придутся по вкусу самым разборчивым маленьким гурманам и их родителям.
+                    .restaurants__details.details
+                        .details__item 
+                            +svg('clock')
+                            span с 11.00 до 23.30  
+                        .details__item 
+                            +svg('menu')
+                            span Летнее меню
+                        .details__item 
+                            +svg('wi-fi')
+                            span WI-FI
+                        .details__item  
+                            +svg('car')
+                            span Стоянка
+                        .details__item 
+                            +svg('terrace')
+                            span Терраса
+                    a.btn.btn--red.btn--large Забронировать
+                    a.link(href="") Смотреть меню PDF
+    section.restaurants
+        .wrapper.wrapper--medium
+            .restaurants__block
+                .restaurants__slider
+                    .restaurants-slider.swiper-container.js-slider-restaurants
+                        .swiper-wrapper
+                            .swiper-slide
+                                img(src="images/rest/02.jpg", alt="image")
+                            .swiper-slide
+                                img(src="images/rest/02.jpg", alt="image")
+                            .swiper-slide
+                                img(src="images/rest/03.jpg", alt="image")
+
+                        .swiper-pagination
+                        .navigation-arrows__items-center
+                            +navigation-arrows__items-center
+                .restaurants__content
+                    h3 Барбекю
+                    p Мы сделали ставку на простоту исполнения и сезонность продуктов. В основе каждого рецепта — минимум составляющих, что наилучшим образом подчёркивает утончённый вкус каждого ингредиента.
+                    .restaurants__details.details
+                        .details__item 
+                            +svg('clock')
+                            span с 11.00 до 23.30  
+                        .details__item 
+                            +svg('menu')
+                            span Летнее меню
+                        .details__item 
+                            +svg('wi-fi')
+                            span WI-FI
+                        .details__item  
+                            +svg('car')
+                            span Стоянка
+                        .details__item 
+                            +svg('terrace')
+                            span Терраса
+                    a.btn.btn--red.btn--large Забронировать
+                    a.link(href="") Смотреть меню PDF
 
 
 
