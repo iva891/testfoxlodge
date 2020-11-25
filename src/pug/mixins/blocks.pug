@@ -20,11 +20,11 @@ mixin page__banner(title)
 
 
 mixin instagram(img,desc)
-    .instagram-block.swiper-slide(class=cl)
-        .instagram-block__image
-            img(src=img)
-        .instagram-block__desc
-            p=desc
+	.instagram-block.swiper-slide(class=cl)
+		.instagram-block__image.anim-image.js-effect
+			img(src=img)
+		.instagram-block__desc
+			p=desc
 
 
 mixin shooting__type-block(img, title)
@@ -41,13 +41,23 @@ mixin navigation-arrows__items-center
         +svg('next')
 
 mixin placement__slider-item(img)
-    .swiper-slide
-        .placement__slider-item__block
-            .placement__slider-item__image
-                img(src=img alt="image")
-            .placement__slider-item__label
-                +svg('circle-arrow')
-                p Виртуальный тур
+	.swiper-slide
+		.placement__slider-item__block
+			.placement__slider-item__image
+				img(src=img alt="image")
+			.placement__slider-item__label
+				+svg('circle-arrow')
+				p Виртуальный тур
+
+mixin restBlock(title,text,img)
+	.rest-block.swiper-slide
+		.rest-block__part 
+			.rest-block__desc 
+				h4=title
+				p=text
+			.rest-block__image
+				img(src=img)
+				
 
 mixin news-block-item (img, link, title,description)
     a(href="").news-block-item
