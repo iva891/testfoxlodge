@@ -14,8 +14,9 @@ mixin services(img,name)
 			img(src=img alt="image")
 		h6=name
 
-mixin page__banner(title)
-	.page__banner
+mixin page-banner(img,title)
+	.page-banner
+		img(src=img alt="image")
 		h2=title
 			
 
@@ -28,11 +29,13 @@ mixin instagram(img,desc)
 
 
 mixin shooting__type-block(img, title)
-	.shooting__type
-		img(src=img alt="image")
-		.shooting__type-desc
-			h3=title
-			a(href="#").btn.btn--small Выбрать
+	.shooting__type-block.w50
+		.shooting__type
+			.shooting__type-img
+				img(src=img alt="image")
+			.shooting__type-desc
+				h3=title
+				a(href="#").btn.btn--small Выбрать
 
 mixin navigation-arrows__items-center
 	.navigation-arrows__item.prev

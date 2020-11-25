@@ -143,7 +143,8 @@ $(function () {
 		  },
 		});
 	});
-
+	
+// Placement types
 	$(".types-placement__list").on("click","a", function (event) {
 		event.preventDefault();
 		var id  = $(this).attr('href'),

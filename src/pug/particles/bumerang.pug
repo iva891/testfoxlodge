@@ -130,3 +130,65 @@
 
             a(href="#").btn.btn--large Забронировать
             a(href="#").link Тарифы на размещение
+
+
+    .placement__block
+        .placement__slider
+            .placement-slider.swiper-container.js-slider-placement
+                .swiper-wrapper
+                    +placement__slider-item('images/placement/02.jpg')
+                    +placement__slider-item('images/placement/01.jpg')
+                    +placement__slider-item('images/placement/03.jpg')
+                    +placement__slider-item('images/placement/04.jpg')
+                .swiper-pagination
+                .navigation-arrows__items-center
+                    +navigation-arrows__items-center
+        .placement__desc.desc
+            .desc__top
+                h3 Апартаменты
+                .placement__bedsize
+                    +svg('bed')
+                    +svg('bed')
+                    +svg('sofa')
+                    .disabled
+                        +svg('sofa')
+            p 4-комнатные апартаменты, 105 м2 
+            p Вмещает до 8 гостей
+            .placement__amenities.amenities
+                ul.amenities__list
+                    li 
+                        +svg('TV')
+                        p Телевизор (НТВ+)
+                    li 
+                        +svg('kitchen')
+                        p Мини-кухня
+                    li 
+                        +svg('ref')
+                        p Холодильник
+                    li 
+                        +svg('wave')
+                        p Микроволновая печь
+                    li 
+                        +svg('cond')
+                        p Кондиционер
+                    li 
+                        +svg('kettle')
+                        p Электрический чайник
+                    li 
+                        +svg('shower')
+                        p 2 душевых кабины
+                    li 
+                        +svg('bath')
+                        p 2 ванны
+                    li 
+                        +svg('wi-fi')
+                        p WI-FI
+                    li 
+                        +svg('car')
+                        p Стоянка для 2 а/м
+                    li 
+                        +svg('terrace')
+                        p Терраса
+
+            a(href="#").btn.btn--large Забронировать
+            a(href="#").link Тарифы на размещение

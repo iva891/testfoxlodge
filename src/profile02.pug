@@ -1,0 +1,35 @@
+extends pug/base-white
+
+append vars
+    - title = 'Размещение'
+
+block content
+    //- ...
+    section.profile02
+        .wrapper.wrapper--small
+            h3 Константинов Иван Павлович
+            .profile__tab.tab-profile
+                .tab-profile
+                    nav.tab-profile__nav
+                        ul.tab-profile__list
+                            li
+                                a(href="#tab-01").tab-profile__link Мои заказы
+                            li
+                                a(href="#tab-02").tab-profile__link Мои Данные
+                        a(href="#").exit Выход
+                            +svg('exit')
+                    .tab-profile__content-wrapper
+                        .tab-profile__content#tab-01
+                            include pug/particles/profile-form
+                        .tab-profile__content#tab-02
+                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nihil in aliquid vel quaerat est eveniet hic. Mollitia, quidem. Exercitationem!
+
+
+
+
+
+
+
+
+
+
