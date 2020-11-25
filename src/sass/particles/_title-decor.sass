@@ -3,7 +3,9 @@
 	font-size: rem(130px)
 	line-height: 80%
 	color: white
-	background: url(../images/image-1.jpg) no-repeat
+	background-image: url(../images/mask-title.jpg)
+	background-repeat: no-repeat 
+	background-position: 25% 65%
 	-webkit-background-clip: text
 	-webkit-text-fill-color: transparent
 	margin-bottom: 62px
@@ -14,6 +16,7 @@
 	+bp($point-2)
 		font-size: rem(48px)
 		line-height: 100%
+		background-position: 30% 60%
 
 .numeral
 	font-size: rem(60px)
@@ -22,19 +25,39 @@
 	font-weight: 700
 	position: relative
 
-	&--line-tops
-		padding-top: 25px
+	&--line-bottom
+		padding-bottom: 20px
 		&:after 
 			content: ''
 			width: 35px 
-			height: 1px
-			background-color: $orange 
+			height: 2px
+			background-color: $baseTxt 
 			position: absolute 
-			top: 0 
+			bottom: 0 
 			left: 0
+
+	&--flex 
+		display: flex
+	&__small 
+		font-size: rem(36px)
+		line-height: 0.8
+		margin-left: 14px
+
+	+bp($point-4)
+		&__small
+			font-size: rem(30px)
+			padding-top: 3px
+		&--line-bottom 
+			&:after
+				height: 3px
 
 	+bp($point-2)
 		font-size: rem(24px)
+
+		&--line-bottom
+			font-size: rem(48px)
+		&__small 
+			font-size: rem(24px)
 
 .title-line
 	padding-bottom: 11px 
@@ -52,3 +75,15 @@
 	display: inline-block
 	line-height: 120%
 	border-bottom: 2px solid $orange
+
+.title-large 
+	h2
+		font-size: rem(130px)
+		line-height: 80%
+		margin: 0
+
+		+bp(1400px)
+			font-size: 10.1vw
+
+		+bp($point-2)
+			font-size: 11vw
