@@ -14,13 +14,10 @@ mixin services(img,name)
             img(src=img alt="image")
         h6=name
 
-mixin page-banner(title)
-    .page__banner
-        h2=title
 mixin page-banner(img,title)
-	.page-banner
-		img(src=img alt="image")
-		h2=title
+    .page-banner
+        img(src=img alt="image")
+        h2=title
 
 
 mixin instagram(img,desc)
