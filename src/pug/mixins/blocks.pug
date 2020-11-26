@@ -22,14 +22,16 @@ mixin page-banner(img,title)
 
 mixin instagram(img,desc)
     .instagram-block.swiper-slide(class=cl)
-        .instagram-block__image.anim-image.js-effect
+		.instagram-block__image
             img(src=img)
         .instagram-block__desc
             p=desc
 
 
 mixin shooting__type-block(img, title)
+	.shooting__type-block.w50
     .shooting__type
+			.shooting__type-img
         img(src=img alt="image")
         .shooting__type-desc
             h3=title
