@@ -11,7 +11,7 @@ block content
         .wrapper.wrapper--medium
             .restaurants__block
                 .restaurants__slider
-                    .restaurants-slider.swiper-container.js-slider-restaurants
+                    .restaurants-slider.swiper-container.js-slider__rest-place
                         .swiper-wrapper
                             .swiper-slide
                                 img(src="images/rest/03.jpg", alt="image")
@@ -28,19 +28,24 @@ block content
                     p Ресторан предлагает широкий выбор оригинальных блюд русской и европейской кухни. Мы сделали ставку на простоту исполнения и сезонность продуктов. В основе каждого рецепта — минимум составляющих, что наилучшим образом подчёркивает утончённый вкус каждого ингредиента. 
                     .restaurants__details.details
                         .details__item 
-                            +svg('clock')
+                            .details__item-icon.thin-icon
+                                +svg('clock')
                             span с 11.00 до 23.30  
-                        .details__item  
-                            +svg('car')
+                        .details__item
+                            .details__item-icon 
+                                +svg('car')
                             span Стоянка
-                        .details__item 
-                            +svg('menu')
+                        .details__item
+                            .details__item-icon.thin-icon 
+                                +svg('menu')
                             span Летнее меню
-                        .details__item 
-                            +svg('terrace')
+                        .details__item
+                            .details__item-icon 
+                             +svg('terrace')
                             span Терраса
-                        .details__item 
-                            +svg('wi-fi')
+                        .details__item
+                            .details__item-icon 
+                                +svg('wi-fi')
                             span WI-FI
 
 
@@ -50,7 +55,7 @@ block content
         .wrapper.wrapper--medium
             .restaurants__block
                 .restaurants__slider
-                    .restaurants-slider.swiper-container.js-slider-restaurants
+                    .restaurants-slider.swiper-container.js-slider__rest-place
                         .swiper-wrapper
                             .swiper-slide
                                 img(src="images/rest/01.jpg", alt="image")
@@ -66,20 +71,21 @@ block content
                     h3 СПА-Кафе
                     p Коллекция вин впечатлит ценителей благородных напитков. Лёгкие и аппетитные лакомства из детского меню придутся по вкусу самым разборчивым маленьким гурманам и их родителям.
                     .restaurants__details.details
-                        .details__item 
-                            +svg('clock')
+                        .details__item
+                            .details__item-icon.thin-icon  
+                                +svg('clock')
                             span с 11.00 до 23.30  
-                        .details__item 
-                            +svg('menu')
-                            span Летнее меню
-                        .details__item 
-                            +svg('wi-fi')
+                        .details__item
+                            .details__item-icon 
+                                +svg('wi-fi')
                             span WI-FI
-                        .details__item  
-                            +svg('car')
-                            span Стоянка
                         .details__item 
-                            +svg('terrace')
+                            .details__item-icon.thin-icon 
+                                +svg('wine')
+                            span Винная карта
+                        .details__item 
+                            .details__item-icon 
+                                +svg('terrace')
                             span Терраса
                     a.btn.btn--red.btn--large Забронировать
                     a.link(href="") Смотреть меню PDF
@@ -87,7 +93,7 @@ block content
         .wrapper.wrapper--medium
             .restaurants__block
                 .restaurants__slider
-                    .restaurants-slider.swiper-container.js-slider-restaurants
+                    .restaurants-slider.swiper-container.js-slider__rest-place
                         .swiper-wrapper
                             .swiper-slide
                                 img(src="images/rest/02.jpg", alt="image")
@@ -104,20 +110,18 @@ block content
                     p Мы сделали ставку на простоту исполнения и сезонность продуктов. В основе каждого рецепта — минимум составляющих, что наилучшим образом подчёркивает утончённый вкус каждого ингредиента.
                     .restaurants__details.details
                         .details__item 
-                            +svg('clock')
+                            .details__item-icon.thin-icon 
+                                +svg('clock')
                             span с 11.00 до 23.30  
                         .details__item 
-                            +svg('menu')
-                            span Летнее меню
-                        .details__item 
-                            +svg('wi-fi')
-                            span WI-FI
-                        .details__item  
-                            +svg('car')
-                            span Стоянка
-                        .details__item 
-                            +svg('terrace')
+                            .details__item-icon 
+                                +svg('terrace')
                             span Терраса
+                        .details__item
+                            .details__item-icon  
+                                +svg('wi-fi')
+                            span WI-FI
+                        
                     a.btn.btn--red.btn--large Забронировать
                     a.link(href="") Смотреть меню PDF
 

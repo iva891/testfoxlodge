@@ -103,17 +103,15 @@ $(function () {
 
 
 
-// Restaurants slider
+// Restaurants slider and placements
 	var swipes = [];
-	$('.js-slider-restaurants').each(function(i, obj){
+	$('.js-slider__rest-place').each(function(i, obj){
 		swipes[i] = new Swiper(obj, {
-		effect: 'coverflow',
 		slidesPerView: 1,
 		spaceBetween: 0,
 		loop: true,
 		speed: 1200,
 		autoHeight: true,
-		centeredSlides: true,
 		pagination: {
 			el: '.swiper-pagination',
 		  },
@@ -124,36 +122,15 @@ $(function () {
 		});
 	});
 
-// Placement slider
-	var swipes = [];
-	$('.js-slider-placement').each(function(i, obj){
-		swipes[i] = new Swiper(obj, {
-		effect: 'coverflow',
-		slidesPerView: 1,
-		spaceBetween: 0,
-		loop: true,
-		speed: 1200,
-		centeredSlides: true,
-		navigation: {
-			nextEl: '.navigation-arrows__item.next',
-			prevEl: '.navigation-arrows__item.prev'
-		},
-		pagination: {
-			el: '.swiper-pagination',
-		  },
-		});
-	});
 	
 // Placement types
-	$(".types-placement__list").on("click","a", function (event) {
+	$(".js-types__list").on("click","a", function (event) {
 		event.preventDefault();
 		var id  = $(this).attr('href'),
 		top = $(id).offset().top;
 		$('body,html').animate({scrollTop: top-100}, 1500);
 		
 	});
-		
-
 });
 
 

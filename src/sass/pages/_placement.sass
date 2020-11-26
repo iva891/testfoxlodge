@@ -1,25 +1,24 @@
 .placement
     .types-placement
-        margin: 27px 0 45px 0
+        margin: 27px 0 90px 0
         &__list
-            margin: 0 -15px
+            margin: 0 -30px
             padding: 0
             @include flex_center_v
             li 
                 margin: 0
-                padding: 0 15px
+                padding: 0 30px
                 &:after 
                     display: none
         &__link
             font-size: 18px
-            line-height: 29px
+            line-height: 160%
             color: $gray4
-            padding-bottom: 5px
-            &:hover,
-            &:active
-                border-width: 3px
-                color: $baseTxt
-
+            padding-bottom: 10px
+        .types-placement__link:hover,
+        .types-placement__link.active
+            border-bottom: 3px solid $orange
+            color: $baseTxt
 
 .placement__types-heading 
     display: flex 
@@ -38,12 +37,16 @@
                 width: 10px
                 height: 10px
                 float: right
-                stroke: $orange
-                margin: 10px  0 0 3px
+                stroke: transparent
+                fill: url(#paint0_linear) $orange
+                margin: 17px 0px 0px 2px
                 &:last-child
-                    margin-left: 15px
+                    margin-left: 13px
         p 
-            margin: 0 0 40px 0
+            margin: 0 0 35px 0
+            color: $gray4
+            font-size: 16px
+            line-height: 140%
             +bp(1024px)
                 margin-bottom: 15px
 
@@ -74,6 +77,7 @@
                     margin: 7.25px 18px 7.25px 0  
                     color: $white
                     line-height: 22.4px
+                    font-size: 16px
                     font-weight: 400
                     
                 svg
@@ -99,23 +103,27 @@
     &__top
         display: flex 
         flex-wrap: wrap
-        margin-bottom: 20px
+        margin-bottom: 15px
         h3 
-            margin: 0 50px 10px 0
+            margin: 5px 50px 10px 0
+    p 
+        font-size: 16px
+        line-height: 140%
     .placement__bedsize
-        margin-top: 10px
+        margin-top: 20px
         svg
             width: 35px
             height: 24px
             stroke-width: 1px
+            margin-right: 10px
         .disabled
             display: inline-block
             position: relative
             opacity: 0.5
             &:after
                 position: absolute
-                top: -18px
-                right: -18px
+                top: -20px
+                right: -7px
                 content: '?'
                 width: 18px
                 height: 18px
@@ -134,16 +142,16 @@
   
 
 .amenities 
-    margin: 32px 0 45px 0
+    margin: 30px 0 30px 0
     &__list
-        margin: 0 0
+        margin: 0 -5px
         padding: 0
         @include flex_center_v
         flex-wrap: wrap
 
         li 
             margin: 0 0 16px 0!important
-            padding: 0
+            padding: 0 5px
             @include flex_center_v
             width: 50%
             &:after

@@ -12,7 +12,7 @@ block content
         .wrapper.wrapper--medium
             .shooting__types-list.flbox-list
                 +shooting__type-block('images/shooting-02.jpg', 'Стрельба по тарелочкам')
-                +shooting__type-block('images/shooting-01.jpg', 'Пулевая стрельба')
+                +shooting__type-block('images/shooting-01.png', 'Пулевая стрельба')
             
     section.shooting__rules
         .wrapper.wrapper--medium
@@ -20,11 +20,13 @@ block content
                 .shooting__rule-block.w33
                     a(href="#").shooting__rule
                         +svg('rings')
+                        +svg('attention')
                         p
                             b Правила безопасности при стендовой стрельбе
                 .shooting__rule-block.w33
                     a(href="#").shooting__rule
                         +svg('rule')
+                        +svg('attention')
                         p
                             b Правила безопасности в тире
                 .shooting__rule-block.w33
