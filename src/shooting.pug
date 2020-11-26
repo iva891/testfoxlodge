@@ -36,14 +36,37 @@ block content
                             b Тарифы на услуги и на патроны
     section.shooting__room
         .wrapper.wrapper--medium
-            .shooting__room
-                .shooting__room-block
-                    .shooting__room-img
-                        img(src="./images/shooting-room.jpg", alt="image")
-                    .shooting__room-desc
-                        h3  Оружейная мастерская
-                        p На территории «Лисьей норы» работает оружейная мастерская.      Ремонт, сервисное и техническое обслуживание оружия
-                        a.btn.btn--white.btn--small(href="#") Прейскурант
+            .shooting__inner
+                .shooting__types.flbox-list
+                    +shooting__type-block('images/shooting-01.jpg', 'Стрельба по тарелочкам')
+                    +shooting__type-block('images/shooting-02.jpg', 'Стрельба по тарелочкам')
+                    +shooting__type-block('images/shooting-02.jpg', 'Стрельба по тарелочкам')
+
+                .shooting__rules.flbox-list
+                    .shooting__rule-block.w33
+                        .shooting__rule
+                            +svg('rings')
+                            p
+                                b Правила безопасности при стендовой стрельбе
+                    .shooting__rule-block.w33
+                        .shooting__rule
+                            +svg('rule')
+                            p
+                                b Правила безопасности в тире
+                    .shooting__rule-block.w33
+                        .shooting__rule
+                            +svg('book')
+                            p
+                                b Тарифы на услуги и на патроны
+                    .shooting__rule-block.w33
+                        .shooting__rule
+                            +svg('book')
+                            p
+                                b Тарифы на услуги и на патроны
+                .shooting__room
+                    h3  Оружейная мастерская
+                    p На территории «Лисьей норы» работает оружейная мастерская.      Ремонт, сервисное и техническое обслуживание оружия
+                    a.btn.btn--white.btn--small(href="#") Прейскурант
 
 
 

@@ -13,18 +13,20 @@ block content
 					+sliderItem('background-image: url(images/slide-1.jpg)','video/video-3.mp4')
 					+sliderItem('background-image: url(images/slide-1.jpg)','video/video-2.mp4')
 					+sliderItem('background-image: url(images/slide-1.jpg)','video/video-1.mp4')
-				.slider-pagination.swiper-pagination
 			.slider-category.js-slider-category.swiper-container
 				.swiper-wrapper
 					.slider-category__item.swiper-slide
 						span 01 
 						h6 Отдых за рубежом... Москвы
+						.animate-line
 					.slider-category__item.swiper-slide
 						span 02
 						h6 Ценителям активного отдыха
+						.animate-line
 					.slider-category__item.swiper-slide
 						span 03
 						h6 Стрельба - любителям и профессионалам
+						.animate-line
 			.slider-about
 				.wrapper.wrapper--large
 					.slider-about__part
@@ -49,7 +51,7 @@ block content
 						.numeral.numeral--line-top 80 га
 						p Завтрак у озера, прогулки на свежем воздухе, чистый водоем с песчаным пляжем – все это в 39 км от Москвы.
 
-				.about__image
+				.about__image.anim-image.js-effect
 					img(src="images/image-1.jpg" alt="image")
 
 	section.services
@@ -105,22 +107,102 @@ block content
 				.architecture__block
 					.left-indent
 						h6 FOX-INN
-					.architecture__image 
+					.architecture__image.anim-image.js-effect
 						img(src="images/obj-1.jpg" alt="img")
 				.architecture__block 
 					h6 Бумеранг
-					.architecture__image 
+					.architecture__image.anim-image.js-effect 
 						img(src="images/obj-2.jpg" alt="img")
 
-	img(src="images/foil-remove.jpg")
+	.video-content
+		.content
+			.content__preview
+			video.content__video(muted, loop)
+				source(src='video/video-2.mp4', type='video/mp4')
+			svg.content__icon.js-square.js-stack(version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' height='100px' width='100px' viewbox='0 0 100 100' enable-background='new 0 0 100 100' xml:space='preserve')
+				path.stroke-solid(fill='none' stroke='white' d='M49.9,2.5C23.6,2.8,2.1,24.4,2.5,50.4C2.9,76.5,24.7,98,50.3,97.5c26.4-0.6,47.4-21.8,47.2-47.7\C97.3,23.7,75.7,2.3,49.9,2.5')
+				path.stroke-dotted(fill='none' stroke='white' d='M49.9,2.5C23.6,2.8,2.1,24.4,2.5,50.4C2.9,76.5,24.7,98,50.3,97.5c26.4-0.6,47.4-21.8,47.2-47.7\C97.3,23.7,75.7,2.3,49.9,2.5')
+				path.icon(fill='white' d='M38,69c-1,0.5-1.8,0-1.8-1.1V32.1c0-1.1,0.8-1.6,1.8-1.1l34,18c1,0.5,1,1.4,0,1.9L38,69z')
+
+			.content__video-bar
+				.content__video-progress
+				.content__video-drag
+		.wrapper.wrapper--medium
+			.video-content__block
+				.video-content__unit
+					p Место, где можно встретить оленей, отдохнуть  на песчаном пляже или покататься на лодке.
 
 
 	section.rest 
-		.wrapper.wrapper--small
-			.rest__title
-				h2 Рестораны
+		.wrapper.wrapper--medium
+			.rest__inner
+				.rest__title
+					h2 Рестораны
 				.rest-slider.js-rest-slider.swiper-container
 					.swiper-wrapper
+						+restBlock('RED DEER','Бар, ресторан с русской и европейской кухней, фирменными деликатесами и разнообразной винной картой. К столу - свежие фермерские продукты, которые можно купить и для дома. ','images/rest-1.jpg')
+						+restBlock('СПА-Кафе','Бар, ресторан с русской и европейской кухней, фирменными деликатесами и разнообразной винной картой. К столу - свежие фермерские продуктыдля дома.','images/rest-1.jpg')
+						+restBlock('RED DEER','Бар, ресторан с русской и европейской кухней, фирменными деликатесами и разнообразной винной картой. К столу - свежие фермерские продукты, которые можно купить и для дома. ','images/rest-1.jpg')
+						+restBlock('СПА-Кафе','Бар, ресторан с русской и европейской кухней, фирменными деликатесами и разнообразной фермерские продукты, которые можно купить и для дома.','images/rest-1.jpg')
+					.navigation-arrows
+						.navigation-arrows__item.js-prev-rest
+							+svg('prev')
+						.navigation-arrows__item.js-next-rest
+							+svg('next')
+
+	section.spa 
+		.wrapper
+			.spa__part
+				.spa__image.anim-image.js-effect
+					img(src="images/spa-1.jpg" alt="image") 
+				.spa__image.spa__image--right.anim-image.js-effect
+					img(src="images/spa-2.jpg" alt="image") 
+				.spa-desc
+					h2 FOXLAND  SPA
+					p SPA с уникальным набором услуг в эко-стиле, уходы для лица и тела на основе натуральных компонентов от ведущих мировых брендов. Баня с купелью в чистейшем озере.
+
+	section.complex
+		.wrapper
+			.complex__title
+				h2 Стрелковый комплекс
+			.complex__part
+				.complex__block
+					.complex__image2.anim-image.js-effect
+						img(src="images/complex-1.jpg" alt="image") 
+					.spa-desc
+						h2 Стрелковый комплекс
+						h4 Крупнейший стрелковый комплекс в Европе
+						p Тренировки круглый год на площадках  для спортинга в естественном природном ландшафте либо в пулевых тирах открытого и закрытого типа. Можно заказать услуги инструктора по стрельбе, приобрести в магазине одежду и спортивное снаряжение, отремонтировать оружие в нашей мастерской. 
+				.complex__image.anim-image.js-effect
+					img(src="images/complex-2.jpg" alt="image") 
+
+	section.events
+		.wrapper
+			h2 Мероприятия 
+			.events__top 
+				.events__title
+					h4 Прекрасная площадка для проведения корпоративных и частных мероприятий любого формата и масштаба. 
+				.events__desc
+					p Команда опытных event-менеджеров и дизайнеров поможет воплотить в жизнь ваши самые креативные идеи, подготовит оригинальный сценарий и оформление любого события.
+			.events-slider.js-events-slider.swiper-container
+				.swiper-wrapper
+					.events-block.swiper-slide
+						img(src="images/events-1.jpg" alt="image")
+					.events-block.swiper-slide
+						img(src="images/events-1.jpg" alt="image")
+					.events-block.swiper-slide
+						img(src="images/events-1.jpg" alt="image")
+					.events-block.swiper-slide
+						img(src="images/events-1.jpg" alt="image")
+				.navigation-arrows.navigation-arrows--white
+					.navigation-arrows__item.js-prev-event
+						+svg('prev')
+					.navigation-arrows__item.navigation-arrows__item--right.js-next-event
+						+svg('next')
+
+
+
+
 
 	include pug/particles/instagram
 
