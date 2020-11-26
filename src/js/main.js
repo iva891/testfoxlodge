@@ -1,7 +1,6 @@
 import './header'
 import './ui-elements'
 import './slider'
-import './animation'
 import './form'
 import './popup'
-import './video-controller'
+import './tab'
