@@ -1,18 +1,37 @@
 .news-block
+  padding-top: 10px
+
+.news-block-wrapper
+  border-bottom: 1px solid $gray2
+
+.news-block-list
   display: flex
   flex-wrap: wrap
   margin: 0 -25px
 
-.news-block-item
-  display: flex
-  flex-direction: column
-  width: 33%
+.news-block-column
+  width: 33.3%
   padding: 0 25px
   margin: 40px 0 67px
+  border: none
+
+.news-block-item
+  display: block
+  width: 100%
+  height: 100%
+  background-color: $white
 
 .news-block-item:hover
   border: none
   text-decoration: none
+
+.news-block-item img
+  width: 100%
+  transition: all .7s ease
+
+.news-block-item:hover img
+  transition: all .7s ease
+  transform: scale(1.1)
 
 .news-block-item-description>p
   margin: 30px 0 19px
@@ -27,3 +46,98 @@
   font-size: 16px
   line-height: 140%
   color: #7F7F7F
+
+.news-block-button
+  display: flex
+  justify-content: space-between
+  margin-bottom: 65px
+
+.news-block-btn-list a
+  width: 45px
+  height: 45px
+  color: #7F7F7F
+
+.news-block-btn-list a:not(:first-child)
+  margin-left: 9px
+
+.news-block-button .btn-next a
+  width: 145px
+  height: 45px
+  margin-right: 7px
+
+.news-subscribe
+  padding: 28px 0 60px
+
+.news-subscribe-title h3
+  margin-bottom: 8px
+
+.news-subscribe-title p
+  margin-top: 8px
+
+.news-subscribe
+  display: flex
+  justify-content: space-between
+
+.news-subscribe-title-email
+  width: 321px
+  padding-top: 55px
+  margin-right: 159px
+  align-self: center
+
+@media screen and (max-width: 1024px)
+  .news-block-column
+    width: 49.4%
+  .news-subscribe-title-email
+    margin-right: 0
+
+@media screen and (max-width: 756px)
+  .news-block-column
+    width: 100%
+
+  .news-subscribe
+    flex-direction: column
+
+  .news-subscribe-title-email
+    margin-right: 0
+    align-self: flex-start
+
+@media screen and (max-width: 540px)
+  .news-block-button
+    flex-direction: column
+
+  .news-block-button .btn-next a
+    width: 100%
+    margin: 40px 0 0 0
+
+  .news-subscribe-title-email
+    padding-top: 20px
+
+  .news-block-column
+    margin: 30px 0 20px
+
+  .news-block-item-description>p
+    margin: 6px 0 19px
+
+  .news-block-item-description h4
+    margin: 28px 0 10px
+  .news-subscribe-title-email
+    width: 100%
+
+@media screen and (max-width: 375px)
+  .news-block-btn-list a
+    margin: 9px 0 0 9px
+
+
+.news-subscribe-title-email .form-field:before
+    content: ""
+    position: absolute
+    top: 0
+    bottom: 0
+    right: 16px
+    margin: auto 0
+    width: 24px
+    height: 24px
+    -webkit-transition: opacity .3s linear
+    background-size: cover
+    background-position: top
+    background-image: url(../images/news-img/icon-valid-mail.svg)
