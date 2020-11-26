@@ -1,0 +1,43 @@
+extends pug/base
+
+append vars
+	- title = 'О нас'
+
+block content
+	section.about-top
+		.about-top__foil(style="background-image: url(images/about-1.jpg)")
+		.wrapper.wrapper--large
+			.about-top__part
+				.video-content__block
+					.about-top-block
+						h1 Добро пожаловать в «Лисью Нору»
+				.about-top__desc 
+					p В одном комплексе сочетаются разнообразные возможности для спорта, отдыха и восстановления сил.
+
+	section.step 
+		.wrapper.wrapper--large
+			.step__part 
+				.step-unit
+					.step-unit__wrap
+						.numeral.numeral--line-bottom 39 км 
+						p Загородный отдых недалеко от Москвы
+				.step-unit
+					.step-unit__wrap
+						.numeral.numeral--line-bottom 80 га
+						p Обширные живописные окрестности
+				.step-unit
+					.step-unit__wrap
+						.numeral.numeral--line-bottom.numeral--flex
+							span 21 
+							span.numeral__small стрелковая площадка
+						p Самый большой стрелковый комплекс в Европе
+
+	section.area
+		.area__foil(style="background-image: url(images/about-2.jpg)")
+			.wrapper
+				.title-large
+					h2 Лесопарковая зона
+		.wrapper
+			.video-content__block
+				.video-content__unit
+					p В «Лисьей норе» было высажено 40 тыс. деревьев разных пород.

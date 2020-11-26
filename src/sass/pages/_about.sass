@@ -1,0 +1,159 @@
+.about-top 
+	padding-bottom: 20px
+	&__foil
+		width: 100% 
+		height: 891px 
+		+foil
+		background-size: auto 
+
+		+bp(1850px)
+			background-size: cover
+
+	&__part 
+		display: flex
+		h1 
+			position: relative 
+			z-index: 2 
+			max-width: 670px
+			margin-bottom: 0
+		.video-content__block
+			padding-top: 90px
+			max-width: 920px 
+			width: 100%
+
+	&__desc 
+		max-width: 482px 
+		margin-left: 90px
+		padding-top: 60px
+
+	+bp(1300px)
+		&__desc 
+			margin-left: 30px 
+			max-width: 30%
+
+	+bp(1150px)
+		&__part 
+			display: block
+			.video-content__block
+				width: auto 
+				max-width: 100%
+		&__desc 
+			max-width: 481px
+			padding-top: 0 
+			margin-left: 0
+
+	+bp($point-4)
+		&__part 
+			h1 
+				font-size: 7.5vw
+			.video-content__block
+				padding-top: 60px
+				padding-bottom: 0
+
+	+bp($point-3)
+		&__foil 
+			height: 85vw
+
+	+bp(650px)
+		padding-bottom: 0
+		&__part 
+			display: block
+			.video-content__block
+				padding-top: 20px
+			h1 
+				font-size: rem(32px)
+
+
+
+.step 
+	padding: 40px 0
+	&__part 
+		display: flex
+		margin: 0 -15px
+		max-width: 1520px
+
+	&-unit 
+		width: 33.33%
+		width: 100%
+		padding: 0 15px
+		color: $gray4
+
+		&__wrap 
+			max-width: 276px
+
+		&:first-child 
+			.step-unit__wrap
+				max-width: 250px
+	+bp($point-4)
+		padding: 20px 0 30px
+	+bp(650px)
+		padding-top: 0
+		&__part 
+			display: block
+			padding-left: 35px
+			padding-top: 10px
+		&-unit
+			margin-bottom: 33px
+			&:last-child 
+				margin-bottom: 0
+
+	+bp($point-2)
+		padding-bottom: 25px
+		&-unit 
+			max-width: 200px
+
+
+
+
+.area 
+	padding: 50px 0
+	&__foil
+		width: 100% 
+		height: 800px 
+		+foil
+		color: $white
+		display: flex 
+		align-items: center
+		background-size: auto 
+
+		+bp(1850px)
+			background-size: cover
+
+		.title-large 
+			max-width: 938px
+
+	.video-content__block
+		margin-left: auto
+		&:before 
+			width: 45%
+		&:after 
+			content: ''
+			width: 2000px 
+			height: 100% 
+			position: absolute 
+			top: 0 
+			left: 99%
+			background-color: $white
+
+	+bp(1400px)
+		&__foil 
+			height: 55vw
+
+	+bp($point-5)
+		.video-content__block 
+			width: auto
+			&:after 
+				display: none
+
+	+bp($point-4)
+		padding: 10px 0 30px
+		.video-content__block 
+			padding-top: 50px
+
+	+bp(700px)
+		&__foil 
+			height: 65vw
+
+	+bp(650px)
+		.video-content__block 
+			padding-top: 20px
