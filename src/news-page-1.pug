@@ -1,0 +1,59 @@
+extends pug/base-white
+
+append vars
+    - title = 'Новость'
+
+block content
+    article.news-block(style="padding-top:50px")
+        .wrapper
+            .nav-news-block
+                ul.nav-list
+                    li.nav-bar-news-item
+                        a.link.link--gray(href='#') Главная
+                    li.nav-bar-news-item
+                        span.link--gray-disabled Новости
+            .news-block-title(style="max-width:1105px")
+                h1 Требуются лодочники!
+            .news-block-description(style="max-width:1040px")
+                p Дорогие гости, для освежающей водной прогулки вы можете воспользоваться лодкой вместимостью до 5 человек.
+                p Лодка предоставляется бесплатно под залог документа проживающим гостям, а также приезжающим гостям, которые воспользовались любой услугой в этот день. Длительность прогулки до 2-х часов. Ключи можно получить на ресепшене.
+                p Убедительная просьба пользоваться жилетами и не перемещаться в зону купания. Отход и паркинг только у причала!
+            .news-block-content
+                 img(src="images/news-img/news-content1.png", alt="img")
+    section.slider-block
+        .wrapper.wrapper-slider-block-news
+            .navigation-arrows
+                .navigation-arrows__item.js-prev-news
+                    +svg('prev')
+                .navigation-arrows__item.js-next-news
+                    +svg('next')
+            h2 Другие новости
+            .news-slider.swiper-container.js-slider-news
+                .swiper-wrapper
+                    .swiper-slide
+                        .swiper-slider-block_column
+                            +news-block-item('images/news-img/block-1.png' ,'17 Июля, 2020','Ловись рыбка большая и маленькая','В последнее воскресенье июля состоится турнир «Foxland» по ловле на поплавочную удочку.')
+                    .swiper-slide
+                        .swiper-slider-block_column
+                            +news-block-item('images/news-img/block-2.png', '2 Июля, 2020', 'Требуются лодочники!', 'Дорогие гости, для освежающей водной прогулки вы можете воспользоваться лодкой вместимостью до 5 человек. ' )
+                    .swiper-slide
+                        .swiper-slider-block_column
+                            +news-block-item('images/news-img/block-3.png', '26 Июня, 2020','Red Deer открывает свои двери!', 'Мы обеспечиваем социальное дистанцирование и проводим санитарно-эпидемические мероприятия в помещении ресторана до и после каждого гостя.')
+                    .swiper-slide
+                        .swiper-slider-block_column
+                            +news-block-item('images/news-img/block-4.png', '17 Июля, 2020', 'Преобразуем солнечный свет в электроэнергию', 'Лисья Нора запустила самую мощную солнечную электростанцию на территории Москвы и Подмосковья.')
+                    .swiper-slide
+                        .swiper-slider-block_column
+                            +news-block-item('images/news-img/block-5.png', '2 Июля, 2020', 'Изменение в режиме работы', 'Дорогие гости! В целях противодействия распространению коронавируса переходим на режим обязательной самоизоляции.')
+                    .swiper-slide
+                        .swiper-slider-block_column
+                            +news-block-item('images/news-img/block-6.png', '26 Июня, 2020', 'Изменения режима работы в СПА-Кафе', 'СПА-Кафе работает по предварительной записи.')
+                    .swiper-slide
+                        .swiper-slider-block_column
+                            +news-block-item('images/news-img/block-7.png', '17 Июля, 2020', 'Бронирование услуг Foxland SPA', 'В последнее воскресенье июля состоится турнир «В целях сохранения вашего здоровья, мы изменили в СПА режим приема заказов. ﻿')
+                    .swiper-slide
+                        .swiper-slider-block_column
+                            +news-block-item('images/news-img/block-8.png', '2 Июля, 2020', 'Весна идет – весне дорогу!', '8 марта – весенняя праздничная программа в ресторане RED DEER для всех гостей!')
+                    .swiper-slide
+                        .swiper-slider-block_column
+                            +news-block-item('images/news-img/block-9.png', '26 Июня, 2020', 'На недельку в Лисью нору!', 'Мы обеспечиваем социальное дистанцирование и проводим санитарно-эпидемические мероприятия в помещении ресторана до и после каждого гостя.')
