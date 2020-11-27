@@ -46,7 +46,7 @@ block content
 		.wrapper
 			.eko__part.eko__part--center
 				.eko__item
-					.eko__image
+					.eko__image.anim-image.js-effect
 						img(src="images/eko-1.jpg" alt="eko")
 				.eko__item
 					.eko__desc.eko__desc--relax
@@ -61,10 +61,10 @@ block content
 						a.link.link--icon.link--gray(href="#") 
 							+svg('doc') 
 							span Заключение о качестве  воды
-					.eko__image
+					.eko__image.anim-image.js-effect
 						img(src="images/eko-2.jpg" alt="eko")
 				.eko__item.eko__item--left
-					.eko__image.eko__image--right
+					.eko__image.eko__image--right.anim-image.js-effect
 						img(src="images/eko-3.jpg" alt="eko")
 
 			.eko__forest
@@ -74,16 +74,84 @@ block content
 					.eko__desc.eko__desc--forest
 						h2 Лесной мир
 						p У нас можно встретить пушистых лис и разнообразных птиц, а по зеленым аллеям безбоязненно прогуливаются грациозные олени.
-					.eko__image-forest
+					.eko__image-forest.anim-image.js-effect
 						img(src="images/eko-4.jpg" alt="eko")
-					.eko__image.eko__image--right
+					.eko__image.eko__image--right.anim-image.js-effect
 						img(src="images/eko-5.jpg" alt="eko")
 
 			.eko__part.eko__part--center.eko__part--reverse
 				.eko__item
-					.eko__image
+					.eko__image.anim-image.js-effect
 						img(src="images/eko-6.jpg" alt="eko")
 				.eko__item
 					.eko__desc.eko__desc--fly
 						h2 Вертолетная площадка 
 						p Наши гости могут приехать не только на машине, но и прилететь на вертолете. На территории комплекса оборудована специальная вертолетная площадка.
+
+	.gallery
+		.wrapper.wrapper--large
+			.gallery-slider.swiper-container.js-gallery-slider
+				.swiper-wrapper
+					.gallery-slide.swiper-slide
+						.gallery__image.js-gallery-slide
+							image(src="images/gallery-1.jpg")
+					.gallery-slide.swiper-slide
+						.gallery__image.js-gallery-slide
+							image(src="images/gallery-1.jpg")
+					.gallery-slide.swiper-slide
+						.gallery__image.js-gallery-slide
+							image(src="images/gallery-1.jpg")
+					.gallery-slide.swiper-slide
+						.gallery__image.js-gallery-slide
+							image(src="images/gallery-1.jpg")
+				.navigation-arrows.navigation-arrows--white-bor
+					.navigation-arrows__item.js-prev-gallery
+						+svg('prev')
+					.navigation-arrows__item.js-next-gallery
+						+svg('next')
+	.section.about-complex
+		.wrapper.wrapper--large
+			.about-complex__block
+				.about-complex__desc 
+					h2 Крупнейший стрелковый комплекс в Европе
+					p  Круглый год вы можете приезжать в «Лисью нору» и стрелять по мишеням, имитирующим бег или полет всевозможных птиц и животных.
+				.about-complex__part
+					.about-complex__image.about-complex__image--2.anim-image.js-effect
+						img(src="images/eko-7.jpg")
+					.about-complex__image.about-complex__image--pos.anim-image.js-effect
+						img(src="images/eko-8.jpg")
+					.about-complex__image.anim-image.js-effect
+						img(src="images/eko-9.jpg")
+	.virtual-tour
+		.wrapper
+			h2.title-line Виртуальный тур
+		iframe(src="http://foxlodge.ru/about/tour/")
+
+	section.relax 
+		.wrapper
+			.relax__top
+				.relax__line
+					h2 Активный отдых
+					a(href="#") Прейскурант 
+				h4 У нас вы найдете площадки для активного отдыха, рыбалки, стрельбы, оздоровительных процедур. Зимой можно покататься на коньках, ледяных горках и беговых лыжах.
+			.relax-slider.swiper-container.js-slider-relax
+				.swiper-wrapper
+					.swiper-slide
+						+services('images/relax-1.jpg','Тенис')
+					.swiper-slide
+						+services('images/relax-2.jpg','Рыбалка')
+					.swiper-slide
+						+services('images/relax-1.jpg','Велопрогулки')
+					.swiper-slide
+						+services('images/relax-1.jpg','Тенис')
+					.swiper-slide
+						+services('images/relax-2.jpg','Рыбалка')
+					.swiper-slide
+						+services('images/relax-1.jpg','Велопрогулки')
+				.navigation-arrows.navigation-arrows--white-bor
+					.navigation-arrows__item.js-prev-relax
+						+svg('prev')
+					.navigation-arrows__item.js-next-relax
+						+svg('next')
+
+	include pug/particles/instagram
