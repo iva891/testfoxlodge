@@ -141,7 +141,7 @@
 
 	+bp($point-5)
 		.video-content__block 
-			width: auto
+			width: 100%
 			&:after 
 				display: none
 
@@ -157,3 +157,126 @@
 	+bp(650px)
 		.video-content__block 
 			padding-top: 20px
+
+.eko 
+	.wrapper
+		max-width: 1356px
+	&__part 
+		display: flex 
+		padding: 50px 0
+		&--center 
+			align-items: center
+	&__item 
+		width: 48%
+		padding-left: 55px
+		&:first-child 
+			width: 52%
+			padding-left: 0 
+			padding-right: 55px
+
+		&--left 
+			padding-left: 0
+	&__forest 
+		display: flex
+		position: relative
+	&__desc 
+		max-width: 460px
+		margin-left: 50px
+		h2 
+			margin-top: 0
+		.link 
+			margin-top: 30px
+
+		&--relax 
+			max-width: 328px
+		&--left 
+			margin-left: 0
+			padding-top: 25px
+			padding-bottom: 60px
+			p
+				max-width: 400px
+			
+
+		&--forest 
+			max-width: 429px
+			margin-bottom: 180px
+			margin-top: -100px
+
+			+bp($point-5)
+				margin-bottom: 90px
+
+	&__image 
+		&--right 
+			text-align: right
+
+	&__image-forest 
+		width: 49.6vw
+		position: absolute 
+		right: 50.5% 
+		top: 9%
+
+		+bp(1400px)
+			top: 20%
+
+
+	+bp($point-5)
+		&__desc 
+			margin-left: 0
+
+	+bp($point-4)
+		padding: 30px 0
+		&__part 
+			display: block 
+			padding: 0px 0 40px
+			&--reverse 
+				display: flex 
+				flex-direction: column-reverse
+				padding-bottom: 0
+			p 
+				&:last-child 
+					margin-bottom: 0
+		&__forest 
+			display: block 
+		&__item 
+			width: 100% 
+			padding: 0 
+			&:first-child 
+				width: 100% 
+				padding: 0
+		&__desc 
+			max-width: 100% 
+			margin-top: 60px
+			padding-top: 0
+			&--left 
+				max-width: 465px
+				padding-bottom: 40px
+			&--forest 
+				margin-bottom: 40px
+			&--fly 
+				margin-bottom: 40px
+
+		&__image, 
+		&__image-forest
+			width: 100%
+			img 
+				width: 100%
+
+		&__image-forest
+			position: static
+			margin-bottom: 30px
+
+	+bp($point-2)
+		padding-top: 10px
+		&__desc 
+			margin-top: 30px
+			.link 
+				margin-top: 0px
+			&--left 
+				padding-bottom: 20px
+			&--forest,
+			&--fly 
+				margin-bottom: 15px
+		&__part 
+			padding-bottom: 15px
+		&__image-forest 
+			margin-bottom: 15px
