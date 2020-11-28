@@ -1,0 +1,71 @@
+extends pug/base-white
+
+append vars
+    - title = 'Новость 2'
+
+block content
+    article.news-block
+        .wrapper
+            .nav-news-block
+                ul.nav-list
+                    li.nav-bar-news-item
+                        a.link.link--gray-news(href='#') Главная
+                    li.nav-bar-news-item
+                        span.link--gray-news-disabled Новости
+            .news-block-title
+                h1 Red Deer открывает свои двери!
+            .news-block-content
+                img(src="images/news-img/news-content2.png", alt="img")
+            .news-block-description
+                h3 Дорогие друзья!
+                p С 1 июля Ресторан Red Deer приступает к ослаблению режима карантинных мер.
+                p Мы заботимся о вашей безопасности и вводим правила бронирования столика накануне дня вашего визита (по телефону: 8-495-1209229 или на нашем сайте).
+                p Для проживающих гостей будут забронированы именные столы в зале ресторана (2-ой этаж) время работы ресторана:
+                ul
+                    li обед с 13:00 до 15:00
+                    li ужин с 18:00 до 21:00
+                .news-block-description-strong
+                    p
+                        strong Доставка в номера проживания с 1 июля действовать не будет, но вы можете заказать блюда на вынос.
+                p Мы обеспечиваем социальное дистанцирование и проводим санитарно-эпидемические мероприятия в помещении ресторана до и после каждого гостя.
+                p Будем рады вас видеть!
+
+
+
+    section.slider-block
+                    .wrapper.wrapper-slider-block-news
+                        .navigation-arrows
+                            .navigation-arrows__item.js-prev-news
+                                +svg('prev')
+                            .navigation-arrows__item.js-next-news
+                                +svg('next')
+                        h2 Другие новости
+                        .news-slider.swiper-container.js-slider-news
+                            .swiper-wrapper
+                                .swiper-slide
+                                    .swiper-slider-block_column
+                                        +news-block-item('images/news-img/block-1.png' ,'17 Июля, 2020','Ловись рыбка большая и маленькая','В последнее воскресенье июля состоится турнир «Foxland» по ловле на поплавочную удочку.')
+                                .swiper-slide
+                                    .swiper-slider-block_column
+                                        +news-block-item('images/news-img/block-2.png', '2 Июля, 2020', 'Требуются лодочники!', 'Дорогие гости, для освежающей водной прогулки вы можете воспользоваться лодкой вместимостью до 5 человек. ' )
+                                .swiper-slide
+                                    .swiper-slider-block_column
+                                        +news-block-item('images/news-img/block-3.png', '26 Июня, 2020','Red Deer открывает свои двери!', 'Мы обеспечиваем социальное дистанцирование и проводим санитарно-эпидемические мероприятия в помещении ресторана до и после каждого гостя.')
+                                .swiper-slide
+                                    .swiper-slider-block_column
+                                        +news-block-item('images/news-img/block-4.png', '17 Июля, 2020', 'Преобразуем солнечный свет в электроэнергию', 'Лисья Нора запустила самую мощную солнечную электростанцию на территории Москвы и Подмосковья.')
+                                .swiper-slide
+                                    .swiper-slider-block_column
+                                        +news-block-item('images/news-img/block-5.png', '2 Июля, 2020', 'Изменение в режиме работы', 'Дорогие гости! В целях противодействия распространению коронавируса переходим на режим обязательной самоизоляции.')
+                                .swiper-slide
+                                    .swiper-slider-block_column
+                                        +news-block-item('images/news-img/block-6.png', '26 Июня, 2020', 'Изменения режима работы в СПА-Кафе', 'СПА-Кафе работает по предварительной записи.')
+                                .swiper-slide
+                                    .swiper-slider-block_column
+                                        +news-block-item('images/news-img/block-7.png', '17 Июля, 2020', 'Бронирование услуг Foxland SPA', 'В последнее воскресенье июля состоится турнир «В целях сохранения вашего здоровья, мы изменили в СПА режим приема заказов. ﻿')
+                                .swiper-slide
+                                    .swiper-slider-block_column
+                                        +news-block-item('images/news-img/block-8.png', '2 Июля, 2020', 'Весна идет – весне дорогу!', '8 марта – весенняя праздничная программа в ресторане RED DEER для всех гостей!')
+                                .swiper-slide
+                                    .swiper-slider-block_column
+                                        +news-block-item('images/news-img/block-9.png', '26 Июня, 2020', 'На недельку в Лисью нору!', 'Мы обеспечиваем социальное дистанцирование и проводим санитарно-эпидемические мероприятия в помещении ресторана до и после каждого гостя.')
