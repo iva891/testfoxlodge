@@ -40,11 +40,15 @@
 
 			svg 
 				stroke: $orange
+
 		svg
 			width: 20px
 			height: 20px
 			fill: transparent
 			stroke-width: 2px
+
+		&:focus 
+			outline: none
 			
 		&:first-child
 			margin-right: 20px
@@ -62,6 +66,18 @@
 	&--white 
 		svg 
 			stroke: $white
+
+	&--white-bor
+		.navigation-arrows__item
+			border-color: $white
+
+			&:hover 
+				border-color: $orange 
+		svg 
+			stroke: $white
+
+		
+
 
 
 
