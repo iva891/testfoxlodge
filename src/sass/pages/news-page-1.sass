@@ -1,3 +1,6 @@
+article.news-block
+  padding-top: 50px
+
 .nav-news-block
   margin: 30px 0
 
@@ -10,9 +13,15 @@
   content: "/"
   padding: 0 15px
 
-.link--gray-disabled
+.link--gray-news-disabled
   font-size: $link-fs
   color: $gray4
+
+.news-block-title
+  max-width: 1105px
+
+.news-block-description
+  max-width: 1040px
 
 .news-block-content
     margin: 65px 0
@@ -41,3 +50,21 @@
       margin: 120px 0 50px
 
 
+@media screen and (max-width: 480px)
+  .nav-news-block ul li:not(:last-child)
+    margin:  0
+
+  .news-block-content
+    margin: 0
+
+  .wrapper-slider-block-news
+    margin-bottom: 0
+
+  article.news-block
+    padding: 0
+
+  .wrapper-slider-block-news h2
+    margin: 50px 0 18px
+
+  .wrapper-slider-block-news .news-slider
+    margin-top: 30px
