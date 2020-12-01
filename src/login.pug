@@ -1,0 +1,59 @@
+extends pug/base-no-footer
+
+append vars
+	- title = 'Личный кабинет'
+
+block header
+	include pug/template/header
+	+header('header--white')
+
+block content
+	.main-top
+		section.login-block
+			.wrapper
+				h3 Константинов Иван Павлович
+				.login-menu
+					ul.login-menu__list
+						li.login-menu__item: a.login-menu__link.link--gray-news(href="#") Мои заказы
+						li.login-menu__item: a.login-menu__link.login-menu__link--active.link--gray-news(href="#") Мои данные
+					a.login-menu__exit(href="#")
+						p.login-menu__exit-text Выход
+						+svg("exit")
+				.form-block.form-block--login
+					h5 Контактные данные
+					form.form.form--login.js-form(action='#')
+						.form-row
+							.form-col
+								label.form-field
+									input.js-input.form-field__input(type='text', name="lastname", data-msg="Заполните форму" required)
+									span.form-field__label Фамилия*
+									span.form-field__icon
+
+							.form-col
+								label.form-field
+									input.js-input.form-field__input(type='text', name="name", data-msg="Заполните форму" required)
+									span.form-field__label Имя*
+									span.form-field__icon
+
+							.form-col
+								label.form-field
+									input.js-input.form-field__input(type='text', name="middlename", data-msg="Заполните форму" required)
+									span.form-field__label Отчество*
+									span.form-field__icon
+
+						.form-row.form-row--login-bottom
+							.form-col.form-col--login-first
+								label.form-field
+									input.js-input.js-input-mask.form-field__input(type='tel', name="tel", data-mask="+7(999)999-99-99" data-msg="Заполните форму" required)
+									span.form-field__label Телефон*
+									span.form-field__icon
+
+							.form-col
+								label.form-field
+									input.js-input.form-field__input(type='email', name="email", data-msg="Заполните форму" required)
+									span.form-field__label Email*
+									span.form-field__icon
+
+
+						.form-bottom
+							button.submit.btn.btn--red.btn--large(type="submit") Сохранить

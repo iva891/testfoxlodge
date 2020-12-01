@@ -1,0 +1,62 @@
+.login-menu
+	color: red
+	@include flex_between_center
+	&__list
+		@include flex_between_center
+		margin: 0
+		padding: 0
+	&__item
+		@include flex_center_b
+		height: 35px
+		margin-top: 0
+		margin-bottom: 0
+		margin-right: 45px
+		&:after
+			display: none
+	&__link
+		cursor: pointer
+		&--active
+			color: $black
+			&:hover
+				color: $black
+			&:after
+				content: ""
+				position: absolute
+				left: 0
+				bottom: 0
+				width: 100%
+				height: 3px
+				background-color: $orange
+	&__exit
+		color: $gray4
+		@include flex_between_center
+		&:hover
+			border: none
+		& svg
+			fill: $gray4
+			stroke: $gray4
+			width: 18px
+			height: 19px
+	&__exit-text
+		margin-top: 0
+		margin-bottom: 0
+		margin-right: 16px
+
+.form-block--login
+	margin-top: 45px
+	padding-top: 65px
+	padding-bottom: 65px
+	padding-left: 65px
+	padding-right: 195px
+	border: 7px solid $gray1
+	& h5
+		margin-top: 0
+
+.form--login
+	margin-top: 40px
+
+.form-row--login-bottom
+	justify-content: start
+
+.form-col--login-first
+	margin-right: 2%
